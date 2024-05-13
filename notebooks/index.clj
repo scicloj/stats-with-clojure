@@ -1,3 +1,4 @@
+^:kindly/hide-code
 (ns index
   (:require [scicloj.kindly.v4.kind :as kind]
             [scicloj.kindly.v4.api :as kindly]))
@@ -36,6 +37,6 @@
   - Histograms
   - Bubble Plots
   - Heatmaps
-- Bibliography
+- [Bibliography](bibliography.html)
 "
 )
