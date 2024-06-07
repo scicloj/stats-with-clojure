@@ -1,42 +1,40 @@
+;; ## Preface
+
 ^:kindly/hide-code
 (ns index
-  (:require [scicloj.kindly.v4.kind :as kind]
-            [scicloj.kindly.v4.api :as kindly]))
+  (:require [scicloj.kindly.v4.api :as kindly]
+            [scicloj.kindly.v4.kind :as kind]
+            [clojure.string :as str]
+            [clojure.string :as string]
+            [scicloj.clay.v2.api :as clay]))
 
 ^:kindly/hide-code
 (def md
   (comp kindly/hide-code kind/md))
 
-(md "
-- Initial setup
-- Basic Stats
-  - fastmath
-  - Sum
-  - Mean
-  - Median
-  - Mode
-  - Range
-  - Inter Quartile Range
-  - Outlier
-  - Standard Deviation
-- Data Collection
-  - Webscrapping
-  - Data Scources
-  - Surveys
-  - Bias
-  - Double Blind Experiments
-- Data Wrangling
-  - Tablecloth
-- Visualisations
-  - Scatter Plots
-  - Line Plots
-  - Bar Plots
-  - Pie Plots
-  - Area Plots
-  - Box Plots
-  - Histograms
-  - Bubble Plots
-  - Heatmaps
-- [Bibliography](bibliography.html)
-"
-)
+(md (slurp "content/stats_with_clojure.md"))
+
+;; ## Chapters
+
+^:kindly/hide-code
+(defn chapter->title [chapter]
+  (or (some->> chapter
+               (format "notebooks/stats_with_clojure/%s.clj")
+               slurp
+               str/split-lines
+               (filter #(re-matches #"^;; # .*" %))
+               first
+               (#(str/replace % #"^;; # " "")))
+      chapter))
+
+(->> "notebooks/chapters.edn"
+     slurp
+     clojure.edn/read-string
+     (map (fn [chapter]
+            (prn [chapter (chapter->title chapter)])
+            (format "\n- [%s](stats_with_clojure.%s.html)\n"
+                    (chapter->title chapter)
+                    chapter)))
+     (string/join "\n")
+     md)
+
