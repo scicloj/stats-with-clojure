@@ -1,0 +1,262 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Stats With Clojure",
+    "section": "",
+    "text": "0.1 Preface\nClojure is an excellent programming language which scales well. That is you can write small programs, in most languages it’s maintainable, but when it comes to humongous code, most languages fail. Clojure on the other hands excels in this area, it scales well.\nData Science projects start as many small programs and projects, and finally you need to stitch them, and the code grows. Clojure is excellent when it comes to dealing with scale. We feel Clojure is an excellent choice for Data Scientists, and in this book we will show you how.\nThis book adopts two approaches. First it helps you learn statistics from scratch, writing code to create statical library with your own hands. Then it introduces you to the was of Clojure Data Science professional way of doing stats.\nWe believe in it’s final form, this book will be an asset both to people who know Clojure and want to learn statistics to venture into the world of Data Science, and we also feel that this book will a great reference material for Data Science professionals who code in Clojure.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Preface</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#chapters",
+    "href": "index.html#chapters",
+    "title": "Stats With Clojure",
+    "section": "0.2 Chapters",
+    "text": "0.2 Chapters\n\nAbout This Book\nGetting This Book\nSetting Things Up\nBasic Statistics\nVisualization\nCharts\nBibliography\n\n\nsource: notebooks/index.clj",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Preface</span>"
+    ]
+  },
+  {
+    "objectID": "stats_with_clojure.about_this_book.html",
+    "href": "stats_with_clojure.about_this_book.html",
+    "title": "2  About This Book",
+    "section": "",
+    "text": "source: notebooks/stats_with_clojure/about_this_book.clj",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>About This Book</span>"
+    ]
+  },
+  {
+    "objectID": "stats_with_clojure.getting_this_book.html",
+    "href": "stats_with_clojure.getting_this_book.html",
+    "title": "3  Getting This Book",
+    "section": "",
+    "text": "source: notebooks/stats_with_clojure/getting_this_book.clj",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Getting This Book</span>"
+    ]
+  },
+  {
+    "objectID": "stats_with_clojure.setting_things_up.html",
+    "href": "stats_with_clojure.setting_things_up.html",
+    "title": "4  Setting Things Up",
+    "section": "",
+    "text": "source: notebooks/stats_with_clojure/setting_things_up.clj",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Setting Things Up</span>"
+    ]
+  },
+  {
+    "objectID": "stats_with_clojure.basic_statistics.html",
+    "href": "stats_with_clojure.basic_statistics.html",
+    "title": "5  Basic Statistics",
+    "section": "",
+    "text": "5.1 Total",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Basic Statistics</span>"
+    ]
+  },
+  {
+    "objectID": "stats_with_clojure.basic_statistics.html#mean",
+    "href": "stats_with_clojure.basic_statistics.html#mean",
+    "title": "5  Basic Statistics",
+    "section": "5.2 Mean",
+    "text": "5.2 Mean",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Basic Statistics</span>"
+    ]
+  },
+  {
+    "objectID": "stats_with_clojure.basic_statistics.html#median",
+    "href": "stats_with_clojure.basic_statistics.html#median",
+    "title": "5  Basic Statistics",
+    "section": "5.3 Median",
+    "text": "5.3 Median",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Basic Statistics</span>"
+    ]
+  },
+  {
+    "objectID": "stats_with_clojure.basic_statistics.html#mode",
+    "href": "stats_with_clojure.basic_statistics.html#mode",
+    "title": "5  Basic Statistics",
+    "section": "5.4 Mode",
+    "text": "5.4 Mode",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Basic Statistics</span>"
+    ]
+  },
+  {
+    "objectID": "stats_with_clojure.basic_statistics.html#range",
+    "href": "stats_with_clojure.basic_statistics.html#range",
+    "title": "5  Basic Statistics",
+    "section": "5.5 Range",
+    "text": "5.5 Range",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Basic Statistics</span>"
+    ]
+  },
+  {
+    "objectID": "stats_with_clojure.basic_statistics.html#percentiles",
+    "href": "stats_with_clojure.basic_statistics.html#percentiles",
+    "title": "5  Basic Statistics",
+    "section": "5.6 Percentiles",
+    "text": "5.6 Percentiles",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Basic Statistics</span>"
+    ]
+  },
+  {
+    "objectID": "stats_with_clojure.basic_statistics.html#quartiles",
+    "href": "stats_with_clojure.basic_statistics.html#quartiles",
+    "title": "5  Basic Statistics",
+    "section": "5.7 Quartiles",
+    "text": "5.7 Quartiles",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Basic Statistics</span>"
+    ]
+  },
+  {
+    "objectID": "stats_with_clojure.basic_statistics.html#interquartile-range",
+    "href": "stats_with_clojure.basic_statistics.html#interquartile-range",
+    "title": "5  Basic Statistics",
+    "section": "5.8 Interquartile Range",
+    "text": "5.8 Interquartile Range",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Basic Statistics</span>"
+    ]
+  },
+  {
+    "objectID": "stats_with_clojure.basic_statistics.html#variance",
+    "href": "stats_with_clojure.basic_statistics.html#variance",
+    "title": "5  Basic Statistics",
+    "section": "5.9 Variance",
+    "text": "5.9 Variance",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Basic Statistics</span>"
+    ]
+  },
+  {
+    "objectID": "stats_with_clojure.basic_statistics.html#standard-deviation",
+    "href": "stats_with_clojure.basic_statistics.html#standard-deviation",
+    "title": "5  Basic Statistics",
+    "section": "5.10 Standard Deviation",
+    "text": "5.10 Standard Deviation",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Basic Statistics</span>"
+    ]
+  },
+  {
+    "objectID": "stats_with_clojure.basic_statistics.html#covariance",
+    "href": "stats_with_clojure.basic_statistics.html#covariance",
+    "title": "5  Basic Statistics",
+    "section": "5.11 Covariance",
+    "text": "5.11 Covariance",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Basic Statistics</span>"
+    ]
+  },
+  {
+    "objectID": "stats_with_clojure.basic_statistics.html#correlation",
+    "href": "stats_with_clojure.basic_statistics.html#correlation",
+    "title": "5  Basic Statistics",
+    "section": "5.12 Correlation",
+    "text": "5.12 Correlation\n\nsource: notebooks/stats_with_clojure/basic_statistics.clj",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Basic Statistics</span>"
+    ]
+  },
+  {
+    "objectID": "stats_with_clojure.visualization.html",
+    "href": "stats_with_clojure.visualization.html",
+    "title": "6  Visualization",
+    "section": "",
+    "text": "6.1 London Cholera Outbreak",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Visualization</span>"
+    ]
+  },
+  {
+    "objectID": "stats_with_clojure.visualization.html#napoleons-invasion-of-russia",
+    "href": "stats_with_clojure.visualization.html#napoleons-invasion-of-russia",
+    "title": "6  Visualization",
+    "section": "6.2 Napoleons Invasion of Russia",
+    "text": "6.2 Napoleons Invasion of Russia\n\nsource: notebooks/stats_with_clojure/visualization.clj",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Visualization</span>"
+    ]
+  },
+  {
+    "objectID": "stats_with_clojure.charts.html",
+    "href": "stats_with_clojure.charts.html",
+    "title": "7  Charts",
+    "section": "",
+    "text": "7.1 Bar Chart",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Charts</span>"
+    ]
+  },
+  {
+    "objectID": "stats_with_clojure.charts.html#pie-chart",
+    "href": "stats_with_clojure.charts.html#pie-chart",
+    "title": "7  Charts",
+    "section": "7.2 Pie Chart",
+    "text": "7.2 Pie Chart",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Charts</span>"
+    ]
+  },
+  {
+    "objectID": "stats_with_clojure.charts.html#line-chart",
+    "href": "stats_with_clojure.charts.html#line-chart",
+    "title": "7  Charts",
+    "section": "7.3 Line Chart",
+    "text": "7.3 Line Chart",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Charts</span>"
+    ]
+  },
+  {
+    "objectID": "stats_with_clojure.charts.html#area-chart",
+    "href": "stats_with_clojure.charts.html#area-chart",
+    "title": "7  Charts",
+    "section": "7.4 Area Chart",
+    "text": "7.4 Area Chart",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Charts</span>"
+    ]
+  },
+  {
+    "objectID": "stats_with_clojure.charts.html#scatter-plot",
+    "href": "stats_with_clojure.charts.html#scatter-plot",
+    "title": "7  Charts",
+    "section": "7.5 Scatter plot",
+    "text": "7.5 Scatter plot",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Charts</span>"
+    ]
+  },
+  {
+    "objectID": "stats_with_clojure.charts.html#heatmaps",
+    "href": "stats_with_clojure.charts.html#heatmaps",
+    "title": "7  Charts",
+    "section": "7.6 Heatmaps",
+    "text": "7.6 Heatmaps\n\nsource: notebooks/stats_with_clojure/charts.clj",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Charts</span>"
+    ]
+  },
+  {
+    "objectID": "stats_with_clojure.bibliography.html",
+    "href": "stats_with_clojure.bibliography.html",
+    "title": "8  Bibliography",
+    "section": "",
+    "text": "Think Stats, 2nd Edition\nIntroduction to Probability and Statistics, 14th Edition\nStatistics and probability, Khan Academy\n\n\nsource: notebooks/stats_with_clojure/bibliography.clj",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Bibliography</span>"
+    ]
+  }
+]

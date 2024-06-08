@@ -1,0 +1,33 @@
+
+---
+format:
+  html:
+    toc: true
+    toc-depth: 4
+    theme: [cosmo, notebooks/custom.scss]
+    output-file: stats_with_clojure.setting_things_up.html
+fontsize: 0.9em
+code-block-background: true
+include-in-header: {text: '<link rel = "icon" href = "data:," />'}
+
+---
+<style></style><style>.printedClojure .sourceCode {
+  background-color: transparent;
+  border-style: none;
+}
+</style><style>.clay-limit-image-width .clay-image {max-width: 100%}
+</style>
+<script src="stats_with_clojure.setting_things_up_files/md-default0.js" type="text/javascript"></script><script src="stats_with_clojure.setting_things_up_files/md-default1.js" type="text/javascript"></script>
+
+# Setting Things Up
+
+
+```{=html}
+<div style="background-color:grey;height:2px;width:100%;"></div>
+```
+
+
+
+```{=html}
+<div><pre><small><small>source: <a href="https://github.com/scicloj/stats-with-clojure/blob/main/notebooks/stats_with_clojure/setting_things_up.clj">notebooks/stats_with_clojure/setting_things_up.clj</a></small></small></pre></div>
+```

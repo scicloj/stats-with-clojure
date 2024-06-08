@@ -1,0 +1,68 @@
+
+---
+format:
+  html:
+    toc: true
+    toc-depth: 4
+    theme: [cosmo, notebooks/custom.scss]
+    output-file: index.html
+fontsize: 0.9em
+code-block-background: true
+include-in-header: {text: '<link rel = "icon" href = "data:," />'}
+
+---
+<style></style><style>.printedClojure .sourceCode {
+  background-color: transparent;
+  border-style: none;
+}
+</style><style>.clay-limit-image-width .clay-image {max-width: 100%}
+</style>
+<script src="index_files/md-default0.js" type="text/javascript"></script><script src="index_files/md-default1.js" type="text/javascript"></script>
+
+## Preface
+
+Clojure is an excellent programming language which scales well. That is you can write small programs, in most languages it's maintainable, but when it comes to humongous code, most languages fail. Clojure on the other hands excels in this area, it scales well.
+
+Data Science projects start as many small programs and projects, and finally you need to stitch them, and the code grows. Clojure is excellent when it comes to dealing with scale. We feel Clojure is an excellent choice for Data Scientists, and in this book we will show you how.
+
+This book adopts two approaches. First it helps you learn statistics from scratch, writing code to create statical library with your own hands. Then it introduces you to the was of Clojure Data Science professional way of doing stats.
+
+We believe in it's final form, this book will be an asset both to people who know Clojure and want to learn statistics to venture into the world of Data Science, and we also feel that this book will a great reference material for Data Science professionals who code in Clojure.
+
+
+
+
+## Chapters
+
+
+- [About This Book](stats_with_clojure.about_this_book.html)
+
+
+- [Getting This Book](stats_with_clojure.getting_this_book.html)
+
+
+- [Setting Things Up](stats_with_clojure.setting_things_up.html)
+
+
+- [Basic Statistics](stats_with_clojure.basic_statistics.html)
+
+
+- [Visualization](stats_with_clojure.visualization.html)
+
+
+- [Charts](stats_with_clojure.charts.html)
+
+
+- [Bibliography](stats_with_clojure.bibliography.html)
+
+
+
+```{=html}
+<div style="background-color:grey;height:2px;width:100%;"></div>
+```
+
+
+
+```{=html}
+<div><pre><small><small>source: <a href="https://github.com/scicloj/stats-with-clojure/blob/main/notebooks/index.clj">notebooks/index.clj</a></small></small></pre></div>
+```
