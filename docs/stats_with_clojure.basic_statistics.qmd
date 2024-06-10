@@ -24,23 +24,372 @@ include-in-header: {text: '<link rel = "icon" href = "data:," />'}
 
 ## Total
 
+$$
+\sum_{i=1}^n x_i
+$$
+
+
+::: {.sourceClojure}
+```clojure
+(def marks [70 80 60 90])
+```
+:::
+
+
+
+::: {.sourceClojure}
+```clojure
+(apply + marks)
+```
+:::
+
+
+
+::: {.printedClojure}
+```clojure
+300
+
+```
+:::
+
+
+
+::: {.sourceClojure}
+```clojure
+(defn total [vector]
+  (apply + vector))
+```
+:::
+
+
+
+::: {.sourceClojure}
+```clojure
+(total marks)
+```
+:::
+
+
+
+::: {.printedClojure}
+```clojure
+300
+
+```
+:::
+
+
 
 ## Mean
+
+
+::: {.sourceClojure}
+```clojure
+(defn mean [vector]
+  (/ (total vector) (count vector)))
+```
+:::
+
+
+
+::: {.sourceClojure}
+```clojure
+(mean marks)
+```
+:::
+
+
+
+::: {.printedClojure}
+```clojure
+75
+
+```
+:::
+
 
 
 ## Median
 
 
+::: {.sourceClojure}
+```clojure
+(defn median_odd [vector]
+  (nth vector (/ (count vector) 2)))
+```
+:::
+
+
+
+::: {.sourceClojure}
+```clojure
+(median_odd marks)
+```
+:::
+
+
+
+::: {.printedClojure}
+```clojure
+60
+
+```
+:::
+
+
+
+::: {.sourceClojure}
+```clojure
+(defn median_even [vector]
+  (let [middle-idx (/ (count vector) 2)]
+    (/ (+ (nth vector middle-idx) (nth vector (dec middle-idx))) 2)))
+```
+:::
+
+
+
+::: {.sourceClojure}
+```clojure
+(median_even marks)
+```
+:::
+
+
+
+::: {.printedClojure}
+```clojure
+70
+
+```
+:::
+
+
+
+::: {.sourceClojure}
+```clojure
+(defn median [vector]
+  (if (even? (count vector))
+    (median_even vector)
+    (median_odd vector)))
+```
+:::
+
+
+
+::: {.sourceClojure}
+```clojure
+(median marks)
+```
+:::
+
+
+
+::: {.printedClojure}
+```clojure
+70
+
+```
+:::
+
+
+
 ## Mode
+
+
+::: {.sourceClojure}
+```clojure
+(defn mode [vector]
+  (->> vector
+       frequencies
+       (sort-by second >)
+       first
+       first))
+```
+:::
+
+
+
+::: {.sourceClojure}
+```clojure
+(mode marks)
+```
+:::
+
+
+
+::: {.printedClojure}
+```clojure
+70
+
+```
+:::
+
 
 
 ## Range
 
 
+::: {.sourceClojure}
+```clojure
+(defn stats-range [vector]
+  (- (apply max vector) (apply min vector)))
+```
+:::
+
+
+
+::: {.sourceClojure}
+```clojure
+(stats-range marks)
+```
+:::
+
+
+
+::: {.printedClojure}
+```clojure
+30
+
+```
+:::
+
+
+
 ## Percentiles
 
 
+::: {.sourceClojure}
+```clojure
+(defn percentile [vector percentile]
+  (let [sorted-vector (sort vector)
+        idx (int (* percentile (/ (count sorted-vector) 100)))]
+    (nth sorted-vector idx)))
+```
+:::
+
+
+
+::: {.sourceClojure}
+```clojure
+(percentile marks 60)
+```
+:::
+
+
+
+::: {.printedClojure}
+```clojure
+80
+
+```
+:::
+
+
+
+::: {.sourceClojure}
+```clojure
+(percentile marks 90)
+```
+:::
+
+
+
+::: {.printedClojure}
+```clojure
+90
+
+```
+:::
+
+
+
 ## Quartiles
+
+
+::: {.sourceClojure}
+```clojure
+(def one-to-forty (range 1 41))
+```
+:::
+
+
+
+::: {.sourceClojure}
+```clojure
+(defn first-quartile [vector]
+  (percentile vector 25))
+```
+:::
+
+
+
+::: {.sourceClojure}
+```clojure
+(first-quartile one-to-forty)
+```
+:::
+
+
+
+::: {.printedClojure}
+```clojure
+11
+
+```
+:::
+
+
+
+::: {.sourceClojure}
+```clojure
+(defn second-quartile [vector]
+  (percentile vector 50))
+```
+:::
+
+
+
+::: {.sourceClojure}
+```clojure
+(second-quartile one-to-forty)
+```
+:::
+
+
+
+::: {.printedClojure}
+```clojure
+21
+
+```
+:::
+
+
+
+::: {.sourceClojure}
+```clojure
+(defn third-quartile [vector]
+  (percentile vector 75))
+```
+:::
+
+
+
+::: {.sourceClojure}
+```clojure
+(third-quartile one-to-forty)
+```
+:::
+
+
+
+::: {.printedClojure}
+```clojure
+31
+
+```
+:::
+
 
 
 ## Interquartile Range
@@ -49,7 +398,60 @@ include-in-header: {text: '<link rel = "icon" href = "data:," />'}
 ## Variance
 
 
+::: {.sourceClojure}
+```clojure
+(defn variance [vector]
+  (let [m (mean vector)]
+    (apply + (map #(* % %) (map #(- % m) vector)))))
+```
+:::
+
+
+
+::: {.sourceClojure}
+```clojure
+(variance marks)
+```
+:::
+
+
+
+::: {.printedClojure}
+```clojure
+500
+
+```
+:::
+
+
+
 ## Standard Deviation
+
+
+::: {.sourceClojure}
+```clojure
+(defn standard-deviation [vector]
+  (Math/sqrt (variance vector)))
+```
+:::
+
+
+
+::: {.sourceClojure}
+```clojure
+(standard-deviation marks)
+```
+:::
+
+
+
+::: {.printedClojure}
+```clojure
+22.360679774997898
+
+```
+:::
+
 
 
 ## Covariance

@@ -54,7 +54,17 @@
     "href": "stats_with_clojure.basic_statistics.html",
     "title": "5  Basic Statistics",
     "section": "",
-    "text": "5.1 Total",
+    "text": "5.1 Total\n\\[\n\\sum_{i=1}^n x_i\n\\]",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Basic Statistics</span>"
+    ]
+  },
+  {
+    "objectID": "stats_with_clojure.basic_statistics.html#total",
+    "href": "stats_with_clojure.basic_statistics.html#total",
+    "title": "5  Basic Statistics",
+    "section": "",
+    "text": "(def marks [70 80 60 90])\n\n\n(apply + marks)\n\n\n300\n\n\n(defn total [vector]\n  (apply + vector))\n\n\n(total marks)\n\n\n300",
     "crumbs": [
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Basic Statistics</span>"
     ]
@@ -64,7 +74,7 @@
     "href": "stats_with_clojure.basic_statistics.html#mean",
     "title": "5  Basic Statistics",
     "section": "5.2 Mean",
-    "text": "5.2 Mean",
+    "text": "5.2 Mean\n\n(defn mean [vector]\n  (/ (total vector) (count vector)))\n\n\n(mean marks)\n\n\n75",
     "crumbs": [
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Basic Statistics</span>"
     ]
@@ -74,7 +84,7 @@
     "href": "stats_with_clojure.basic_statistics.html#median",
     "title": "5  Basic Statistics",
     "section": "5.3 Median",
-    "text": "5.3 Median",
+    "text": "5.3 Median\n\n(defn median_odd [vector]\n  (nth vector (/ (count vector) 2)))\n\n\n(median_odd marks)\n\n\n60\n\n\n(defn median_even [vector]\n  (let [middle-idx (/ (count vector) 2)]\n    (/ (+ (nth vector middle-idx) (nth vector (dec middle-idx))) 2)))\n\n\n(median_even marks)\n\n\n70\n\n\n(defn median [vector]\n  (if (even? (count vector))\n    (median_even vector)\n    (median_odd vector)))\n\n\n(median marks)\n\n\n70",
     "crumbs": [
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Basic Statistics</span>"
     ]
@@ -84,7 +94,7 @@
     "href": "stats_with_clojure.basic_statistics.html#mode",
     "title": "5  Basic Statistics",
     "section": "5.4 Mode",
-    "text": "5.4 Mode",
+    "text": "5.4 Mode\n\n(defn mode [vector]\n  (-&gt;&gt; vector\n       frequencies\n       (sort-by second &gt;)\n       first\n       first))\n\n\n(mode marks)\n\n\n70",
     "crumbs": [
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Basic Statistics</span>"
     ]
@@ -94,7 +104,7 @@
     "href": "stats_with_clojure.basic_statistics.html#range",
     "title": "5  Basic Statistics",
     "section": "5.5 Range",
-    "text": "5.5 Range",
+    "text": "5.5 Range\n\n(defn stats-range [vector]\n  (- (apply max vector) (apply min vector)))\n\n\n(stats-range marks)\n\n\n30",
     "crumbs": [
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Basic Statistics</span>"
     ]
@@ -104,7 +114,7 @@
     "href": "stats_with_clojure.basic_statistics.html#percentiles",
     "title": "5  Basic Statistics",
     "section": "5.6 Percentiles",
-    "text": "5.6 Percentiles",
+    "text": "5.6 Percentiles\n\n(defn percentile [vector percentile]\n  (let [sorted-vector (sort vector)\n        idx (int (* percentile (/ (count sorted-vector) 100)))]\n    (nth sorted-vector idx)))\n\n\n(percentile marks 60)\n\n\n80\n\n\n(percentile marks 90)\n\n\n90",
     "crumbs": [
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Basic Statistics</span>"
     ]
@@ -114,7 +124,7 @@
     "href": "stats_with_clojure.basic_statistics.html#quartiles",
     "title": "5  Basic Statistics",
     "section": "5.7 Quartiles",
-    "text": "5.7 Quartiles",
+    "text": "5.7 Quartiles\n\n(def one-to-forty (range 1 41))\n\n\n(defn first-quartile [vector]\n  (percentile vector 25))\n\n\n(first-quartile one-to-forty)\n\n\n11\n\n\n(defn second-quartile [vector]\n  (percentile vector 50))\n\n\n(second-quartile one-to-forty)\n\n\n21\n\n\n(defn third-quartile [vector]\n  (percentile vector 75))\n\n\n(third-quartile one-to-forty)\n\n\n31",
     "crumbs": [
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Basic Statistics</span>"
     ]
@@ -134,7 +144,7 @@
     "href": "stats_with_clojure.basic_statistics.html#variance",
     "title": "5  Basic Statistics",
     "section": "5.9 Variance",
-    "text": "5.9 Variance",
+    "text": "5.9 Variance\n\n(defn variance [vector]\n  (let [m (mean vector)]\n    (apply + (map #(* % %) (map #(- % m) vector)))))\n\n\n(variance marks)\n\n\n500",
     "crumbs": [
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Basic Statistics</span>"
     ]
@@ -144,7 +154,7 @@
     "href": "stats_with_clojure.basic_statistics.html#standard-deviation",
     "title": "5  Basic Statistics",
     "section": "5.10 Standard Deviation",
-    "text": "5.10 Standard Deviation",
+    "text": "5.10 Standard Deviation\n\n(defn standard-deviation [vector]\n  (Math/sqrt (variance vector)))\n\n\n(standard-deviation marks)\n\n\n22.360679774997898",
     "crumbs": [
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Basic Statistics</span>"
     ]

@@ -75,11 +75,11 @@
 
 ;; ## Range
 
-(defn range [vector]
+(defn stats-range [vector]
   (- (apply max vector) (apply min vector)))
 
 
-(range marks)
+(stats-range marks)
 
 ;; ## Percentiles
 
@@ -93,6 +93,23 @@
 (percentile marks 90)
 
 ;; ## Quartiles
+
+(def one-to-forty (range 1 41))
+
+(defn first-quartile [vector]
+  (percentile vector 25))
+
+(first-quartile one-to-forty)
+
+(defn second-quartile [vector]
+  (percentile vector 50))
+
+(second-quartile one-to-forty)
+
+(defn third-quartile [vector]
+  (percentile vector 75))
+
+(third-quartile one-to-forty)
 
 
 
