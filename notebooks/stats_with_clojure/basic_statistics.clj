@@ -13,7 +13,7 @@
 ;; ## Total
 
 ;; $$
-;; \sum_{i=1}^n x_i
+;; total = \sum_{i=1}^n x_i
 ;; $$
 
 (def marks [70 80 60 90])
@@ -28,6 +28,14 @@
 (total marks)
 
 ;; ## Mean
+
+;; $$
+;; mean = \frac{total}{n}
+;; $$
+
+;; $$
+;; mean = \frac{1}{n} \sum_{i=1}^n x_i
+;; $$
 
 (defn mean [vector]
   (/ (total vector) (count vector)))
@@ -111,9 +119,21 @@
 
 (third-quartile one-to-forty)
 
+(defn quartiles [vector]
+  [(first-quartile vector) (second-quartile vector) (third-quartile vector)])
+
+
+(quartiles one-to-forty)
+
 
 
 ;; ## Interquartile Range
+
+(defn interquartile-range [vector]
+  (- (third-quartile vector) (first-quartile vector)))
+
+
+(interquartile-range one-to-forty)
 
 ;; ## Variance
 

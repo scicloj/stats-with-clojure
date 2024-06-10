@@ -25,7 +25,7 @@ include-in-header: {text: '<link rel = "icon" href = "data:," />'}
 ## Total
 
 $$
-\sum_{i=1}^n x_i
+total = \sum_{i=1}^n x_i
 $$
 
 
@@ -81,6 +81,14 @@ $$
 
 
 ## Mean
+
+$$
+mean = \frac{total}{n}
+$$
+
+$$
+mean = \frac{1}{n} \sum_{i=1}^n x_i
+$$
 
 
 ::: {.sourceClojure}
@@ -392,7 +400,59 @@ $$
 
 
 
+::: {.sourceClojure}
+```clojure
+(defn quartiles [vector]
+  [(first-quartile vector) (second-quartile vector) (third-quartile vector)])
+```
+:::
+
+
+
+::: {.sourceClojure}
+```clojure
+(quartiles one-to-forty)
+```
+:::
+
+
+
+::: {.printedClojure}
+```clojure
+[11 21 31]
+
+```
+:::
+
+
+
 ## Interquartile Range
+
+
+::: {.sourceClojure}
+```clojure
+(defn interquartile-range [vector]
+  (- (third-quartile vector) (first-quartile vector)))
+```
+:::
+
+
+
+::: {.sourceClojure}
+```clojure
+(interquartile-range one-to-forty)
+```
+:::
+
+
+
+::: {.printedClojure}
+```clojure
+20
+
+```
+:::
+
 
 
 ## Variance

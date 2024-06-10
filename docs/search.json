@@ -54,7 +54,7 @@
     "href": "stats_with_clojure.basic_statistics.html",
     "title": "5  Basic Statistics",
     "section": "",
-    "text": "5.1 Total\n\\[\n\\sum_{i=1}^n x_i\n\\]",
+    "text": "5.1 Total\n\\[\ntotal = \\sum_{i=1}^n x_i\n\\]",
     "crumbs": [
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Basic Statistics</span>"
     ]
@@ -74,7 +74,7 @@
     "href": "stats_with_clojure.basic_statistics.html#mean",
     "title": "5  Basic Statistics",
     "section": "5.2 Mean",
-    "text": "5.2 Mean\n\n(defn mean [vector]\n  (/ (total vector) (count vector)))\n\n\n(mean marks)\n\n\n75",
+    "text": "5.2 Mean\n\\[\nmean = \\frac{total}{n}\n\\]\n\\[\nmean = \\frac{1}{n} \\sum_{i=1}^n x_i\n\\]\n\n(defn mean [vector]\n  (/ (total vector) (count vector)))\n\n\n(mean marks)\n\n\n75",
     "crumbs": [
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Basic Statistics</span>"
     ]
@@ -124,7 +124,7 @@
     "href": "stats_with_clojure.basic_statistics.html#quartiles",
     "title": "5  Basic Statistics",
     "section": "5.7 Quartiles",
-    "text": "5.7 Quartiles\n\n(def one-to-forty (range 1 41))\n\n\n(defn first-quartile [vector]\n  (percentile vector 25))\n\n\n(first-quartile one-to-forty)\n\n\n11\n\n\n(defn second-quartile [vector]\n  (percentile vector 50))\n\n\n(second-quartile one-to-forty)\n\n\n21\n\n\n(defn third-quartile [vector]\n  (percentile vector 75))\n\n\n(third-quartile one-to-forty)\n\n\n31",
+    "text": "5.7 Quartiles\n\n(def one-to-forty (range 1 41))\n\n\n(defn first-quartile [vector]\n  (percentile vector 25))\n\n\n(first-quartile one-to-forty)\n\n\n11\n\n\n(defn second-quartile [vector]\n  (percentile vector 50))\n\n\n(second-quartile one-to-forty)\n\n\n21\n\n\n(defn third-quartile [vector]\n  (percentile vector 75))\n\n\n(third-quartile one-to-forty)\n\n\n31\n\n\n(defn quartiles [vector]\n  [(first-quartile vector) (second-quartile vector) (third-quartile vector)])\n\n\n(quartiles one-to-forty)\n\n\n[11 21 31]",
     "crumbs": [
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Basic Statistics</span>"
     ]
@@ -134,7 +134,7 @@
     "href": "stats_with_clojure.basic_statistics.html#interquartile-range",
     "title": "5  Basic Statistics",
     "section": "5.8 Interquartile Range",
-    "text": "5.8 Interquartile Range",
+    "text": "5.8 Interquartile Range\n\n(defn interquartile-range [vector]\n  (- (third-quartile vector) (first-quartile vector)))\n\n\n(interquartile-range one-to-forty)\n\n\n20",
     "crumbs": [
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Basic Statistics</span>"
     ]
