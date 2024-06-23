@@ -44,6 +44,9 @@ We believe in it's final form, this book will be an asset both to people who kno
 - [Setting Things Up](stats_with_clojure.setting_things_up.html)
 
 
+- [Fast Math](stats_with_clojure.fast_math.html)
+
+
 - [Basic Statistics](stats_with_clojure.basic_statistics.html)
 
 
@@ -51,6 +54,12 @@ We believe in it's final form, this book will be an asset both to people who kno
 
 
 - [Charts](stats_with_clojure.charts.html)
+
+
+- [Tabular Data](stats_with_clojure.tabular_data.html)
+
+
+- [Web Scraping](stats_with_clojure.web_scraping.html)
 
 
 - [Bibliography](stats_with_clojure.bibliography.html)

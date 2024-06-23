@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Stats With Clojure - 3&nbsp; Getting This Book</title>
+<title>Stats With Clojure - 9&nbsp; Tabular Data</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./stats_with_clojure.setting_things_up.html" rel="next">
-<link href="./stats_with_clojure.about_this_book.html" rel="prev">
+<link href="./stats_with_clojure.web_scraping.html" rel="next">
+<link href="./stats_with_clojure.charts.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -82,7 +82,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./stats_with_clojure.getting_this_book.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Getting This Book</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./stats_with_clojure.tabular_data.html"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Tabular Data</span></a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -121,7 +121,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./stats_with_clojure.getting_this_book.html" class="sidebar-item-text sidebar-link active">
+  <a href="./stats_with_clojure.getting_this_book.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Getting This Book</span></span></a>
   </div>
 </li>
@@ -157,7 +157,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./stats_with_clojure.tabular_data.html" class="sidebar-item-text sidebar-link">
+  <a href="./stats_with_clojure.tabular_data.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Tabular Data</span></span></a>
   </div>
 </li>
@@ -179,14 +179,20 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#table-cloth" id="toc-table-cloth" class="nav-link active" data-scroll-target="#table-cloth"><span class="header-section-number">9.1</span> Table Cloth</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Getting This Book</span></h1>
+<h1 class="title"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Tabular Data</span></h1>
 </div>
 
 
@@ -211,12 +217,15 @@ ul.task-list li input[type="checkbox"] {
 </style>
 <style>.clay-limit-image-width .clay-image {max-width: 100%}
 </style>
-<script src="stats_with_clojure.getting_this_book_files/md-default0.js" type="text/javascript"></script>
-<script src="stats_with_clojure.getting_this_book_files/md-default1.js" type="text/javascript"></script>
+<script src="stats_with_clojure.tabular_data_files/md-default0.js" type="text/javascript"></script>
+<script src="stats_with_clojure.tabular_data_files/md-default1.js" type="text/javascript"></script>
+<section id="table-cloth" class="level2" data-number="9.1">
+<h2 data-number="9.1" class="anchored" data-anchor-id="table-cloth"><span class="header-section-number">9.1</span> Table Cloth</h2>
 <div style="background-color:grey;height:2px;width:100%;"></div>
-<div><pre><small><small>source: <a href="https://github.com/scicloj/stats-with-clojure/blob/main/notebooks/stats_with_clojure/getting_this_book.clj">notebooks/stats_with_clojure/getting_this_book.clj</a></small></small></pre></div>
+<div><pre><small><small>source: <a href="https://github.com/scicloj/stats-with-clojure/blob/main/notebooks/stats_with_clojure/tabular_data.clj">notebooks/stats_with_clojure/tabular_data.clj</a></small></small></pre></div>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -630,13 +639,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./stats_with_clojure.about_this_book.html" class="pagination-link" aria-label="About This Book">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">About This Book</span></span>
+      <a href="./stats_with_clojure.charts.html" class="pagination-link" aria-label="Charts">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Charts</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./stats_with_clojure.setting_things_up.html" class="pagination-link" aria-label="Setting Things Up">
-        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Setting Things Up</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./stats_with_clojure.web_scraping.html" class="pagination-link" aria-label="Web Scraping">
+        <span class="nav-page-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Web Scraping</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
