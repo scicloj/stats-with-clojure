@@ -34,7 +34,7 @@
     "href": "stats_with_clojure.getting_this_book.html",
     "title": "3  Getting This Book",
     "section": "",
-    "text": "source: notebooks/stats_with_clojure/getting_this_book.clj",
+    "text": "you can read this book on https://scicloj.github.io/stats-with-clojure/.\n\nsource: notebooks/stats_with_clojure/getting_this_book.clj",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Getting This Book</span>"
     ]
@@ -44,7 +44,57 @@
     "href": "stats_with_clojure.setting_things_up.html",
     "title": "4  Setting Things Up",
     "section": "",
-    "text": "source: notebooks/stats_with_clojure/setting_things_up.clj",
+    "text": "4.1 Clojure\nYou need to have Clojure installed to work with this book. If you don’t know Clojure, there ae some resources like https://clojure.org/guides/learn/syntax, there are some Clojure books you could read https://clojure.org/community/books. You can get help from Clojure Slack or from Clojure Zulip https://clojurians.zulipchat.com.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Setting Things Up</span>"
+    ]
+  },
+  {
+    "objectID": "stats_with_clojure.setting_things_up.html#ide",
+    "href": "stats_with_clojure.setting_things_up.html#ide",
+    "title": "4  Setting Things Up",
+    "section": "4.2 IDE",
+    "text": "4.2 IDE\nYou need to have a good IDE for CLojure. Emacs https://www.gnu.org/software/emacs/ is good, and you have an extension called Cider https://cider.mx/ that helps you to work with Clojure.\nIf you are okay about getting tracked VSCode https://code.visualstudio.com/, along with Calva https://calva.io/ can be used. One could also use VSCodium https://vscodium.com/ in case you do not want the evils of Microsoft on your machine, Calva works perfectly well with VSCodium.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Setting Things Up</span>"
+    ]
+  },
+  {
+    "objectID": "stats_with_clojure.setting_things_up.html#git",
+    "href": "stats_with_clojure.setting_things_up.html#git",
+    "title": "4  Setting Things Up",
+    "section": "4.3 Git",
+    "text": "4.3 Git\nMake sure you know git, and have it installed on your system. You can learn about it here https://www.git-scm.com/.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Setting Things Up</span>"
+    ]
+  },
+  {
+    "objectID": "stats_with_clojure.setting_things_up.html#clone-the-project",
+    "href": "stats_with_clojure.setting_things_up.html#clone-the-project",
+    "title": "4  Setting Things Up",
+    "section": "4.4 Clone the project",
+    "text": "4.4 Clone the project\nYou can clone the entire project from github https://github.com/scicloj/stats-with-clojure. you may use:\n$ git clone git@github.com:scicloj/stats-with-clojure.git\nOr\n$ git clone https://github.com/scicloj/stats-with-clojure.git",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Setting Things Up</span>"
+    ]
+  },
+  {
+    "objectID": "stats_with_clojure.setting_things_up.html#run-the-project",
+    "href": "stats_with_clojure.setting_things_up.html#run-the-project",
+    "title": "4  Setting Things Up",
+    "section": "4.5 Run the project",
+    "text": "4.5 Run the project\nOnce cloned, navigate to stats-with-clojure folder:q\n$ cd stats-with-clojure\nThen in the folder jack in with deps.edn.\nIf all the packages needed couldn’t be installed trying:\n$ clj -P -Sthreads 1\nin terminal. Then try to jackin with deps.edn again.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Setting Things Up</span>"
+    ]
+  },
+  {
+    "objectID": "stats_with_clojure.setting_things_up.html#running-this-book",
+    "href": "stats_with_clojure.setting_things_up.html#running-this-book",
+    "title": "4  Setting Things Up",
+    "section": "4.6 Running this book",
+    "text": "4.6 Running this book\nHave REPl running\ncustom REPL commands\nquarto\nREPL\n\nsource: notebooks/stats_with_clojure/setting_things_up.clj",
     "crumbs": [
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Setting Things Up</span>"
     ]

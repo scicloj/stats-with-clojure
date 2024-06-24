@@ -21,6 +21,8 @@ include-in-header: {text: '<link rel = "icon" href = "data:," />'}
 
 # Getting This Book
 
+you can read this book on <https://scicloj.github.io/stats-with-clojure/>.
+
 
 ```{=html}
 <div style="background-color:grey;height:2px;width:100%;"></div>

@@ -179,7 +179,18 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#clojure" id="toc-clojure" class="nav-link active" data-scroll-target="#clojure"><span class="header-section-number">4.1</span> Clojure</a></li>
+  <li><a href="#ide" id="toc-ide" class="nav-link" data-scroll-target="#ide"><span class="header-section-number">4.2</span> IDE</a></li>
+  <li><a href="#git" id="toc-git" class="nav-link" data-scroll-target="#git"><span class="header-section-number">4.3</span> Git</a></li>
+  <li><a href="#clone-the-project" id="toc-clone-the-project" class="nav-link" data-scroll-target="#clone-the-project"><span class="header-section-number">4.4</span> Clone the project</a></li>
+  <li><a href="#run-the-project" id="toc-run-the-project" class="nav-link" data-scroll-target="#run-the-project"><span class="header-section-number">4.5</span> Run the project</a></li>
+  <li><a href="#running-this-book" id="toc-running-this-book" class="nav-link" data-scroll-target="#running-this-book"><span class="header-section-number">4.6</span> Running this book</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -213,10 +224,46 @@ ul.task-list li input[type="checkbox"] {
 </style>
 <script src="stats_with_clojure.setting_things_up_files/md-default0.js" type="text/javascript"></script>
 <script src="stats_with_clojure.setting_things_up_files/md-default1.js" type="text/javascript"></script>
+<section id="clojure" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="clojure"><span class="header-section-number">4.1</span> Clojure</h2>
+<p>You need to have Clojure installed to work with this book. If you don’t know Clojure, there ae some resources like <a href="https://clojure.org/guides/learn/syntax" class="uri">https://clojure.org/guides/learn/syntax</a>, there are some Clojure books you could read <a href="https://clojure.org/community/books" class="uri">https://clojure.org/community/books</a>. You can get help from Clojure Slack or from Clojure Zulip <a href="https://clojurians.zulipchat.com" class="uri">https://clojurians.zulipchat.com</a>.</p>
+</section>
+<section id="ide" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="ide"><span class="header-section-number">4.2</span> IDE</h2>
+<p>You need to have a good IDE for CLojure. Emacs <a href="https://www.gnu.org/software/emacs/" class="uri">https://www.gnu.org/software/emacs/</a> is good, and you have an extension called Cider <a href="https://cider.mx/" class="uri">https://cider.mx/</a> that helps you to work with Clojure.</p>
+<p>If you are okay about getting tracked VSCode <a href="https://code.visualstudio.com/" class="uri">https://code.visualstudio.com/</a>, along with Calva <a href="https://calva.io/" class="uri">https://calva.io/</a> can be used. One could also use VSCodium <a href="https://vscodium.com/" class="uri">https://vscodium.com/</a> in case you do not want the evils of Microsoft on your machine, Calva works perfectly well with VSCodium.</p>
+</section>
+<section id="git" class="level2" data-number="4.3">
+<h2 data-number="4.3" class="anchored" data-anchor-id="git"><span class="header-section-number">4.3</span> Git</h2>
+<p>Make sure you know git, and have it installed on your system. You can learn about it here <a href="https://www.git-scm.com/" class="uri">https://www.git-scm.com/</a>.</p>
+</section>
+<section id="clone-the-project" class="level2" data-number="4.4">
+<h2 data-number="4.4" class="anchored" data-anchor-id="clone-the-project"><span class="header-section-number">4.4</span> Clone the project</h2>
+<p>You can clone the entire project from github <a href="https://github.com/scicloj/stats-with-clojure" class="uri">https://github.com/scicloj/stats-with-clojure</a>. you may use:</p>
+<pre><code>$ git clone git@github.com:scicloj/stats-with-clojure.git</code></pre>
+<p>Or</p>
+<pre><code>$ git clone https://github.com/scicloj/stats-with-clojure.git</code></pre>
+</section>
+<section id="run-the-project" class="level2" data-number="4.5">
+<h2 data-number="4.5" class="anchored" data-anchor-id="run-the-project"><span class="header-section-number">4.5</span> Run the project</h2>
+<p>Once cloned, navigate to <code>stats-with-clojure</code> folder:q</p>
+<pre><code>$ cd stats-with-clojure</code></pre>
+<p>Then in the folder jack in with <code>deps.edn</code>.</p>
+<p>If all the packages needed couldn’t be installed trying:</p>
+<pre><code>$ clj -P -Sthreads 1</code></pre>
+<p>in terminal. Then try to jackin with <code>deps.edn</code> again.</p>
+</section>
+<section id="running-this-book" class="level2" data-number="4.6">
+<h2 data-number="4.6" class="anchored" data-anchor-id="running-this-book"><span class="header-section-number">4.6</span> Running this book</h2>
+<p>Have REPl running</p>
+<p>custom REPL commands</p>
+<p>quarto</p>
+<p>REPL</p>
 <div style="background-color:grey;height:2px;width:100%;"></div>
 <div><pre><small><small>source: <a href="https://github.com/scicloj/stats-with-clojure/blob/main/notebooks/stats_with_clojure/setting_things_up.clj">notebooks/stats_with_clojure/setting_things_up.clj</a></small></small></pre></div>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
