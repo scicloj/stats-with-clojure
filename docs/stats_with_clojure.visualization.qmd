@@ -23,10 +23,25 @@ include-in-header: {text: '<link rel = "icon" href = "data:," />'}
 
 ## London Cholera Outbreak
 
+<https://en.wikipedia.org/wiki/1854_Broad_Street_cholera_outbreak>
+
+![](https://upload.wikimedia.org/wikipedia/commons/2/27/Snow-cholera-map-1.jpg)
 
 
 ## Napoleons Invasion of Russia
 
+<https://en.wikipedia.org/wiki/French_invasion_of_Russia>
+
+![](https://upload.wikimedia.org/wikipedia/commons/2/29/Minard.png)
+
+
+
+
+## Florence Nightingale
+
+<https://en.wikipedia.org/wiki/Florence_Nightingale>
+
+![](https://upload.wikimedia.org/wikipedia/commons/1/17/Nightingale-mortality.jpg)
 
 
 

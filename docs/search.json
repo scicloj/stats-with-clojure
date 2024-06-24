@@ -254,7 +254,7 @@
     "href": "stats_with_clojure.visualization.html",
     "title": "7  Visualization",
     "section": "",
-    "text": "7.1 London Cholera Outbreak",
+    "text": "7.1 London Cholera Outbreak\nhttps://en.wikipedia.org/wiki/1854_Broad_Street_cholera_outbreak",
     "crumbs": [
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Visualization</span>"
     ]
@@ -264,7 +264,17 @@
     "href": "stats_with_clojure.visualization.html#napoleons-invasion-of-russia",
     "title": "7  Visualization",
     "section": "7.2 Napoleons Invasion of Russia",
-    "text": "7.2 Napoleons Invasion of Russia\n\nsource: notebooks/stats_with_clojure/visualization.clj",
+    "text": "7.2 Napoleons Invasion of Russia\nhttps://en.wikipedia.org/wiki/French_invasion_of_Russia",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Visualization</span>"
+    ]
+  },
+  {
+    "objectID": "stats_with_clojure.visualization.html#florence-nightingale",
+    "href": "stats_with_clojure.visualization.html#florence-nightingale",
+    "title": "7  Visualization",
+    "section": "7.3 Florence Nightingale",
+    "text": "7.3 Florence Nightingale\nhttps://en.wikipedia.org/wiki/Florence_Nightingale\n\n\nsource: notebooks/stats_with_clojure/visualization.clj",
     "crumbs": [
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Visualization</span>"
     ]
