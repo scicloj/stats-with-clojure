@@ -4,19 +4,14 @@
             [scicloj.kindly.v4.kind :as kind]
             [clojure.string :as str]
             [clojure.string :as string]
-            [scicloj.clay.v2.api :as clay]))
+            [scicloj.clay.v2.api :as clay]
+            [src.helpers :as h]))
 
-^:kindly/hide-code
-(def md
-  (comp kindly/hide-code kind/md))
-
-^:kindly/hide-code
-(kind/hiccup
- [:img {:src "notebooks/images/stats_with_clojure_front_cover.svg"}])
+(h/img "stats_with_clojure_front_cover.svg")
 
 ;; ## Preface
 
-(md (slurp "content/stats_with_clojure.md"))
+(h/md "stats_with_clojure.md")
 
 ;; ## Chapters
 
