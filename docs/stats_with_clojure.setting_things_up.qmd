@@ -81,9 +81,35 @@ Have REPl running
 
 custom REPL commands
 
+
+```{=html}
+<img src="notebooks/images/custom_repl_command_in_vscodium.png" style="width: 100%;" />
+```
+
+
 quarto
 
+
+```{=html}
+<img src="notebooks/images/create_html_using_quarto.png" style="width: 100%;" />
+```
+
+
+code and HTML side by side
+
+
+```{=html}
+<img src="notebooks/images/executing_notebook_with_quarto.png" style="width: 100%;" />
+```
+
+
 REPL
+
+
+```{=html}
+<img src="notebooks/images/executing_in_repl.png" style="width: 100%;" />
+```
+
 
 
 ```{=html}
