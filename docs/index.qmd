@@ -19,6 +19,12 @@ include-in-header: {text: '<link rel = "icon" href = "data:," />'}
 </style>
 <script src="index_files/md-default0.js" type="text/javascript"></script><script src="index_files/md-default1.js" type="text/javascript"></script>
 
+```{=html}
+<img src="notebooks/images/stats_with_clojure_front_cover.svg" />
+```
+
+
+
 ## Preface
 
 Clojure is an excellent programming language which scales well. That is you can write small programs, in most languages it's maintainable, but when it comes to humongous code, most languages fail. Clojure on the other hands excels in this area, it scales well.

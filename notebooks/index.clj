@@ -10,6 +10,10 @@
 (def md
   (comp kindly/hide-code kind/md))
 
+^:kindly/hide-code
+(kind/hiccup
+ [:img {:src "notebooks/images/stats_with_clojure_front_cover.svg"}])
+
 ;; ## Preface
 
 (md (slurp "content/stats_with_clojure.md"))
