@@ -7,6 +7,10 @@
             [scicloj.clay.v2.api :as clay]
             [src.helpers :as h]))
 
+^:kindly/hide-code
+(def md
+  (comp kindly/hide-code kind/md))
+
 (h/img "stats_with_clojure_front_cover.svg")
 
 ;; ## Preface

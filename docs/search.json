@@ -94,7 +94,7 @@
     "href": "stats_with_clojure.setting_things_up.html#running-this-book",
     "title": "4  Setting Things Up",
     "section": "4.6 Running this book",
-    "text": "4.6 Running this book\nHave REPl running\ncustom REPL commands\n\nquarto\n\n(img \"create_html_using_quarto.png\")\n\n\ncode and HTML side by side\n\n(img \"executing_notebook_with_quarto.png\")\n\n\nREPL\n\n(img \"executing_in_repl.png\")\n\n\n\nsource: notebooks/stats_with_clojure/setting_things_up.clj",
+    "text": "4.6 Running this book\nHave REPl running\ncustom REPL commands\n\nquarto\n\ncode and HTML side by side\n\nREPL\n\n\nsource: notebooks/stats_with_clojure/setting_things_up.clj",
     "crumbs": [
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Setting Things Up</span>"
     ]

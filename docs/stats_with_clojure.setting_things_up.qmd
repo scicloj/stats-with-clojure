@@ -90,14 +90,6 @@ custom REPL commands
 quarto
 
 
-::: {.sourceClojure}
-```clojure
-(img "create_html_using_quarto.png")
-```
-:::
-
-
-
 ```{=html}
 <img src="notebooks/images/create_html_using_quarto.png" style="width: 100%;" />
 ```
@@ -106,28 +98,12 @@ quarto
 code and HTML side by side
 
 
-::: {.sourceClojure}
-```clojure
-(img "executing_notebook_with_quarto.png")
-```
-:::
-
-
-
 ```{=html}
 <img src="notebooks/images/executing_notebook_with_quarto.png" style="width: 100%;" />
 ```
 
 
 REPL
-
-
-::: {.sourceClojure}
-```clojure
-(img "executing_in_repl.png")
-```
-:::
-
 
 
 ```{=html}
