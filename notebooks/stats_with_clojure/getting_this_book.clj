@@ -5,3 +5,5 @@
   (:require [scicloj.kindly.v4.kind :as kind]
             [scicloj.kindly.v4.api :as kindly]))
 
+;; you can read this book on <https://scicloj.github.io/stats-with-clojure/>.
+
