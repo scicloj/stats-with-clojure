@@ -50,6 +50,9 @@ We believe in its final form, this book will be an asset both to people who know
 - [Setting Things Up](stats_with_clojure.setting_things_up.html)
 
 
+- [Sampling](stats_with_clojure.sampling.html)
+
+
 - [Fast Math](stats_with_clojure.fast_math.html)
 
 

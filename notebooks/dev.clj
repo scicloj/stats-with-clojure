@@ -11,4 +11,3 @@
              :base-target-path "docs"
              :book {:title "Stats With Clojure"}
              :clean-up-target-dir true})
-

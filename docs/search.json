@@ -14,7 +14,7 @@
     "href": "index.html#chapters",
     "title": "Stats With Clojure",
     "section": "0.2 Chapters",
-    "text": "0.2 Chapters\n\nAbout This Book\nGetting This Book\nSetting Things Up\nFast Math\nBasic Statistics\nVisualization\nCharts\nTabular Data\nWeb Scraping\nBibliography\n\n\nsource: notebooks/index.clj",
+    "text": "0.2 Chapters\n\nAbout This Book\nGetting This Book\nSetting Things Up\nSampling\nFast Math\nBasic Statistics\nVisualization\nCharts\nTabular Data\nWeb Scraping\nBibliography\n\n\nsource: notebooks/index.clj",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Preface</span>"
     ]
@@ -100,283 +100,293 @@
     ]
   },
   {
+    "objectID": "stats_with_clojure.sampling.html",
+    "href": "stats_with_clojure.sampling.html",
+    "title": "5  Sampling",
+    "section": "",
+    "text": "Let’s say you want to predict elections result of a local leader in a village. The village contains 6000+ families, and you are on limited budget of time and money. You can’t ask all the people their political preferences, instead what you do is to sample, select few of them, ask them what is their political preference, who they might vote, and why. Then you generalize it. This is called sampling.\nA lot could go wrong when you sample. You don’t go about and ask kids who they think will become the leader of the village, they don’t vote, their reasoning might not be as sound as a grown up. Let’s say that the village has 10 wealthy, 1000 middle class, 5000 poor families, what ratio you will pick to sample the population? You may pick 10 middle class and 50 poor families for your survey.\nWhat the statistics of previous voting patterns show? Say all members 10 wealthy families have voted in previous elections, only 150 middle class families have voted in previous elections on an average, and on an average only 3500 poor families have voted in previous elections, now what sampling ratio you are thinking about?\nChoosing the right sample can make your break your statistical quest. When ever you make prediction by sampling, you must also say what is the margin of error that could be for your predictions to vary.\n\nsource: notebooks/stats_with_clojure/sampling.clj",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Sampling</span>"
+    ]
+  },
+  {
     "objectID": "stats_with_clojure.fast_math.html",
     "href": "stats_with_clojure.fast_math.html",
-    "title": "5  Fast Math",
+    "title": "6  Fast Math",
     "section": "",
-    "text": "5.1 What is Fast Math?\nhttps://github.com/generateme/fastmath\nwhy use it?\nspeed\ntested libraries\nconstants\ntrig functions",
+    "text": "6.1 What is Fast Math?\nhttps://github.com/generateme/fastmath\nwhy use it?\nspeed\ntested libraries\nconstants\ntrig functions",
     "crumbs": [
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Fast Math</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Fast Math</span>"
     ]
   },
   {
     "objectID": "stats_with_clojure.fast_math.html#what-is-fast-math",
     "href": "stats_with_clojure.fast_math.html#what-is-fast-math",
-    "title": "5  Fast Math",
+    "title": "6  Fast Math",
     "section": "",
     "text": "(fc/abs -1)\n\n\n1.0\n\n\n(fc/sqrt 9)\n\n\n3.0\n\n\n(fc/sin 0.5)\n\n\n0.47942553860420295\n\n\n(fc/sin (/ fc/PI 2))\n\n\n1.0\n\n\n(fc/exp 1)\n\n\n2.7182818284590455\n\n\n(fc/exp 5)\n\n\n148.4131591025766\n\n\n(fc/log 10)\n\n\n2.302585092994046\n\n\n(fc/log fc/E)\n\n\n1.0\n\n\nsource: notebooks/stats_with_clojure/fast_math.clj",
     "crumbs": [
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Fast Math</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Fast Math</span>"
     ]
   },
   {
     "objectID": "stats_with_clojure.basic_statistics.html",
     "href": "stats_with_clojure.basic_statistics.html",
-    "title": "6  Basic Statistics",
+    "title": "7  Basic Statistics",
     "section": "",
-    "text": "6.1 Total\n\\[\ntotal = \\sum_{i=1}^n x_i\n\\]",
+    "text": "7.1 Total\n\\[\ntotal = \\sum_{i=1}^n x_i\n\\]",
     "crumbs": [
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Basic Statistics</span>"
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Basic Statistics</span>"
     ]
   },
   {
     "objectID": "stats_with_clojure.basic_statistics.html#total",
     "href": "stats_with_clojure.basic_statistics.html#total",
-    "title": "6  Basic Statistics",
+    "title": "7  Basic Statistics",
     "section": "",
     "text": "(def marks [70 80 60 90])\n\n\n(apply + marks)\n\n\n300\n\n\n(defn total [vector]\n  (apply + vector))\n\n\n(total marks)\n\n\n300",
     "crumbs": [
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Basic Statistics</span>"
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Basic Statistics</span>"
     ]
   },
   {
     "objectID": "stats_with_clojure.basic_statistics.html#mean",
     "href": "stats_with_clojure.basic_statistics.html#mean",
-    "title": "6  Basic Statistics",
-    "section": "6.2 Mean",
-    "text": "6.2 Mean\n\\[\nmean = \\frac{total}{n}\n\\]\n\\[\nmean = \\frac{1}{n} \\sum_{i=1}^n x_i\n\\]\n\n(defn mean [vector]\n  (/ (total vector) (count vector)))\n\n\n(mean marks)\n\n\n75",
+    "title": "7  Basic Statistics",
+    "section": "7.2 Mean",
+    "text": "7.2 Mean\n\\[\nmean = \\frac{total}{n}\n\\]\n\\[\nmean = \\frac{1}{n} \\sum_{i=1}^n x_i\n\\]\n\n(defn mean [vector]\n  (/ (total vector) (count vector)))\n\n\n(mean marks)\n\n\n75",
     "crumbs": [
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Basic Statistics</span>"
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Basic Statistics</span>"
     ]
   },
   {
     "objectID": "stats_with_clojure.basic_statistics.html#median",
     "href": "stats_with_clojure.basic_statistics.html#median",
-    "title": "6  Basic Statistics",
-    "section": "6.3 Median",
-    "text": "6.3 Median\n\n(defn median_odd [vector]\n  (nth vector (/ (count vector) 2)))\n\n\n(median_odd marks)\n\n\n60\n\n\n(defn median_even [vector]\n  (let [middle-idx (/ (count vector) 2)]\n    (/ (+ (nth vector middle-idx) (nth vector (dec middle-idx))) 2)))\n\n\n(median_even marks)\n\n\n70\n\n\n(defn median [vector]\n  (if (even? (count vector))\n    (median_even vector)\n    (median_odd vector)))\n\n\n(median marks)\n\n\n70",
+    "title": "7  Basic Statistics",
+    "section": "7.3 Median",
+    "text": "7.3 Median\n\n(defn median_odd [vector]\n  (nth vector (/ (count vector) 2)))\n\n\n(median_odd marks)\n\n\n60\n\n\n(defn median_even [vector]\n  (let [middle-idx (/ (count vector) 2)]\n    (/ (+ (nth vector middle-idx) (nth vector (dec middle-idx))) 2)))\n\n\n(median_even marks)\n\n\n70\n\n\n(defn median [vector]\n  (if (even? (count vector))\n    (median_even vector)\n    (median_odd vector)))\n\n\n(median marks)\n\n\n70",
     "crumbs": [
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Basic Statistics</span>"
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Basic Statistics</span>"
     ]
   },
   {
     "objectID": "stats_with_clojure.basic_statistics.html#mode",
     "href": "stats_with_clojure.basic_statistics.html#mode",
-    "title": "6  Basic Statistics",
-    "section": "6.4 Mode",
-    "text": "6.4 Mode\n\n(defn mode [vector]\n  (-&gt;&gt; vector\n       frequencies\n       (sort-by second &gt;)\n       first\n       first))\n\n\n(mode marks)\n\n\n70",
+    "title": "7  Basic Statistics",
+    "section": "7.4 Mode",
+    "text": "7.4 Mode\n\n(defn mode [vector]\n  (-&gt;&gt; vector\n       frequencies\n       (sort-by second &gt;)\n       first\n       first))\n\n\n(mode marks)\n\n\n70",
     "crumbs": [
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Basic Statistics</span>"
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Basic Statistics</span>"
     ]
   },
   {
     "objectID": "stats_with_clojure.basic_statistics.html#range",
     "href": "stats_with_clojure.basic_statistics.html#range",
-    "title": "6  Basic Statistics",
-    "section": "6.5 Range",
-    "text": "6.5 Range\n\n(defn stats-range [vector]\n  (- (apply max vector) (apply min vector)))\n\n\n(stats-range marks)\n\n\n30",
+    "title": "7  Basic Statistics",
+    "section": "7.5 Range",
+    "text": "7.5 Range\n\n(defn stats-range [vector]\n  (- (apply max vector) (apply min vector)))\n\n\n(stats-range marks)\n\n\n30",
     "crumbs": [
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Basic Statistics</span>"
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Basic Statistics</span>"
     ]
   },
   {
     "objectID": "stats_with_clojure.basic_statistics.html#percentiles",
     "href": "stats_with_clojure.basic_statistics.html#percentiles",
-    "title": "6  Basic Statistics",
-    "section": "6.6 Percentiles",
-    "text": "6.6 Percentiles\n\n(defn percentile [vector percentile]\n  (let [sorted-vector (sort vector)\n        idx (int (* percentile (/ (count sorted-vector) 100)))]\n    (nth sorted-vector idx)))\n\n\n(percentile marks 60)\n\n\n80\n\n\n(percentile marks 90)\n\n\n90",
+    "title": "7  Basic Statistics",
+    "section": "7.6 Percentiles",
+    "text": "7.6 Percentiles\n\n(defn percentile [vector percentile]\n  (let [sorted-vector (sort vector)\n        idx (int (* percentile (/ (count sorted-vector) 100)))]\n    (nth sorted-vector idx)))\n\n\n(percentile marks 60)\n\n\n80\n\n\n(percentile marks 90)\n\n\n90",
     "crumbs": [
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Basic Statistics</span>"
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Basic Statistics</span>"
     ]
   },
   {
     "objectID": "stats_with_clojure.basic_statistics.html#quartiles",
     "href": "stats_with_clojure.basic_statistics.html#quartiles",
-    "title": "6  Basic Statistics",
-    "section": "6.7 Quartiles",
-    "text": "6.7 Quartiles\n\n(def one-to-forty (range 1 41))\n\n\n(defn first-quartile [vector]\n  (percentile vector 25))\n\n\n(first-quartile one-to-forty)\n\n\n11\n\n\n(defn second-quartile [vector]\n  (percentile vector 50))\n\n\n(second-quartile one-to-forty)\n\n\n21\n\n\n(defn third-quartile [vector]\n  (percentile vector 75))\n\n\n(third-quartile one-to-forty)\n\n\n31\n\n\n(defn quartiles [vector]\n  [(first-quartile vector) (second-quartile vector) (third-quartile vector)])\n\n\n(quartiles one-to-forty)\n\n\n[11 21 31]",
+    "title": "7  Basic Statistics",
+    "section": "7.7 Quartiles",
+    "text": "7.7 Quartiles\n\n(def one-to-forty (range 1 41))\n\n\n(defn first-quartile [vector]\n  (percentile vector 25))\n\n\n(first-quartile one-to-forty)\n\n\n11\n\n\n(defn second-quartile [vector]\n  (percentile vector 50))\n\n\n(second-quartile one-to-forty)\n\n\n21\n\n\n(defn third-quartile [vector]\n  (percentile vector 75))\n\n\n(third-quartile one-to-forty)\n\n\n31\n\n\n(defn quartiles [vector]\n  [(first-quartile vector) (second-quartile vector) (third-quartile vector)])\n\n\n(quartiles one-to-forty)\n\n\n[11 21 31]",
     "crumbs": [
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Basic Statistics</span>"
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Basic Statistics</span>"
     ]
   },
   {
     "objectID": "stats_with_clojure.basic_statistics.html#interquartile-range",
     "href": "stats_with_clojure.basic_statistics.html#interquartile-range",
-    "title": "6  Basic Statistics",
-    "section": "6.8 Interquartile Range",
-    "text": "6.8 Interquartile Range\n\n(defn interquartile-range [vector]\n  (- (third-quartile vector) (first-quartile vector)))\n\n\n(interquartile-range one-to-forty)\n\n\n20",
+    "title": "7  Basic Statistics",
+    "section": "7.8 Interquartile Range",
+    "text": "7.8 Interquartile Range\n\n(defn interquartile-range [vector]\n  (- (third-quartile vector) (first-quartile vector)))\n\n\n(interquartile-range one-to-forty)\n\n\n20",
     "crumbs": [
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Basic Statistics</span>"
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Basic Statistics</span>"
     ]
   },
   {
     "objectID": "stats_with_clojure.basic_statistics.html#variance",
     "href": "stats_with_clojure.basic_statistics.html#variance",
-    "title": "6  Basic Statistics",
-    "section": "6.9 Variance",
-    "text": "6.9 Variance\n\n(defn variance [vector]\n  (let [m (mean vector)]\n    (apply + (map #(* % %) (map #(- % m) vector)))))\n\n\n(variance marks)\n\n\n500",
+    "title": "7  Basic Statistics",
+    "section": "7.9 Variance",
+    "text": "7.9 Variance\n\n(defn variance [vector]\n  (let [m (mean vector)]\n    (apply + (map #(* % %) (map #(- % m) vector)))))\n\n\n(variance marks)\n\n\n500",
     "crumbs": [
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Basic Statistics</span>"
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Basic Statistics</span>"
     ]
   },
   {
     "objectID": "stats_with_clojure.basic_statistics.html#standard-deviation",
     "href": "stats_with_clojure.basic_statistics.html#standard-deviation",
-    "title": "6  Basic Statistics",
-    "section": "6.10 Standard Deviation",
-    "text": "6.10 Standard Deviation\n\n(defn standard-deviation [vector]\n  (Math/sqrt (variance vector)))\n\n\n(standard-deviation marks)\n\n\n22.360679774997898",
+    "title": "7  Basic Statistics",
+    "section": "7.10 Standard Deviation",
+    "text": "7.10 Standard Deviation\n\n(defn standard-deviation [vector]\n  (Math/sqrt (variance vector)))\n\n\n(standard-deviation marks)\n\n\n22.360679774997898",
     "crumbs": [
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Basic Statistics</span>"
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Basic Statistics</span>"
     ]
   },
   {
     "objectID": "stats_with_clojure.basic_statistics.html#covariance",
     "href": "stats_with_clojure.basic_statistics.html#covariance",
-    "title": "6  Basic Statistics",
-    "section": "6.11 Covariance",
-    "text": "6.11 Covariance",
+    "title": "7  Basic Statistics",
+    "section": "7.11 Covariance",
+    "text": "7.11 Covariance",
     "crumbs": [
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Basic Statistics</span>"
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Basic Statistics</span>"
     ]
   },
   {
     "objectID": "stats_with_clojure.basic_statistics.html#correlation",
     "href": "stats_with_clojure.basic_statistics.html#correlation",
-    "title": "6  Basic Statistics",
-    "section": "6.12 Correlation",
-    "text": "6.12 Correlation\n\nsource: notebooks/stats_with_clojure/basic_statistics.clj",
+    "title": "7  Basic Statistics",
+    "section": "7.12 Correlation",
+    "text": "7.12 Correlation\n\nsource: notebooks/stats_with_clojure/basic_statistics.clj",
     "crumbs": [
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Basic Statistics</span>"
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Basic Statistics</span>"
     ]
   },
   {
     "objectID": "stats_with_clojure.visualization.html",
     "href": "stats_with_clojure.visualization.html",
-    "title": "7  Visualization",
+    "title": "8  Visualization",
     "section": "",
-    "text": "7.1 London Cholera Outbreak\nhttps://en.wikipedia.org/wiki/1854_Broad_Street_cholera_outbreak",
+    "text": "8.1 London Cholera Outbreak\nhttps://en.wikipedia.org/wiki/1854_Broad_Street_cholera_outbreak",
     "crumbs": [
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Visualization</span>"
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Visualization</span>"
     ]
   },
   {
     "objectID": "stats_with_clojure.visualization.html#napoleons-invasion-of-russia",
     "href": "stats_with_clojure.visualization.html#napoleons-invasion-of-russia",
-    "title": "7  Visualization",
-    "section": "7.2 Napoleons Invasion of Russia",
-    "text": "7.2 Napoleons Invasion of Russia\nhttps://en.wikipedia.org/wiki/French_invasion_of_Russia",
+    "title": "8  Visualization",
+    "section": "8.2 Napoleons Invasion of Russia",
+    "text": "8.2 Napoleons Invasion of Russia\nhttps://en.wikipedia.org/wiki/French_invasion_of_Russia",
     "crumbs": [
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Visualization</span>"
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Visualization</span>"
     ]
   },
   {
     "objectID": "stats_with_clojure.visualization.html#florence-nightingale",
     "href": "stats_with_clojure.visualization.html#florence-nightingale",
-    "title": "7  Visualization",
-    "section": "7.3 Florence Nightingale",
-    "text": "7.3 Florence Nightingale\nhttps://en.wikipedia.org/wiki/Florence_Nightingale\n\n\nsource: notebooks/stats_with_clojure/visualization.clj",
+    "title": "8  Visualization",
+    "section": "8.3 Florence Nightingale",
+    "text": "8.3 Florence Nightingale\nhttps://en.wikipedia.org/wiki/Florence_Nightingale\n\n\nsource: notebooks/stats_with_clojure/visualization.clj",
     "crumbs": [
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Visualization</span>"
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Visualization</span>"
     ]
   },
   {
     "objectID": "stats_with_clojure.charts.html",
     "href": "stats_with_clojure.charts.html",
-    "title": "8  Charts",
+    "title": "9  Charts",
     "section": "",
-    "text": "8.1 Bar Chart",
+    "text": "9.1 Bar Chart",
     "crumbs": [
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Charts</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Charts</span>"
     ]
   },
   {
     "objectID": "stats_with_clojure.charts.html#pie-chart",
     "href": "stats_with_clojure.charts.html#pie-chart",
-    "title": "8  Charts",
-    "section": "8.2 Pie Chart",
-    "text": "8.2 Pie Chart",
+    "title": "9  Charts",
+    "section": "9.2 Pie Chart",
+    "text": "9.2 Pie Chart",
     "crumbs": [
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Charts</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Charts</span>"
     ]
   },
   {
     "objectID": "stats_with_clojure.charts.html#line-chart",
     "href": "stats_with_clojure.charts.html#line-chart",
-    "title": "8  Charts",
-    "section": "8.3 Line Chart",
-    "text": "8.3 Line Chart",
+    "title": "9  Charts",
+    "section": "9.3 Line Chart",
+    "text": "9.3 Line Chart",
     "crumbs": [
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Charts</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Charts</span>"
     ]
   },
   {
     "objectID": "stats_with_clojure.charts.html#area-chart",
     "href": "stats_with_clojure.charts.html#area-chart",
-    "title": "8  Charts",
-    "section": "8.4 Area Chart",
-    "text": "8.4 Area Chart",
+    "title": "9  Charts",
+    "section": "9.4 Area Chart",
+    "text": "9.4 Area Chart",
     "crumbs": [
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Charts</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Charts</span>"
     ]
   },
   {
     "objectID": "stats_with_clojure.charts.html#scatter-plot",
     "href": "stats_with_clojure.charts.html#scatter-plot",
-    "title": "8  Charts",
-    "section": "8.5 Scatter plot",
-    "text": "8.5 Scatter plot",
+    "title": "9  Charts",
+    "section": "9.5 Scatter plot",
+    "text": "9.5 Scatter plot",
     "crumbs": [
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Charts</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Charts</span>"
     ]
   },
   {
     "objectID": "stats_with_clojure.charts.html#heatmaps",
     "href": "stats_with_clojure.charts.html#heatmaps",
-    "title": "8  Charts",
-    "section": "8.6 Heatmaps",
-    "text": "8.6 Heatmaps\n\nsource: notebooks/stats_with_clojure/charts.clj",
+    "title": "9  Charts",
+    "section": "9.6 Heatmaps",
+    "text": "9.6 Heatmaps\n\nsource: notebooks/stats_with_clojure/charts.clj",
     "crumbs": [
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Charts</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Charts</span>"
     ]
   },
   {
     "objectID": "stats_with_clojure.tabular_data.html",
     "href": "stats_with_clojure.tabular_data.html",
-    "title": "9  Tabular Data",
+    "title": "10  Tabular Data",
     "section": "",
-    "text": "9.1 Table Cloth",
+    "text": "10.1 Table Cloth",
     "crumbs": [
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Tabular Data</span>"
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Tabular Data</span>"
     ]
   },
   {
     "objectID": "stats_with_clojure.tabular_data.html#table-cloth",
     "href": "stats_with_clojure.tabular_data.html#table-cloth",
-    "title": "9  Tabular Data",
+    "title": "10  Tabular Data",
     "section": "",
     "text": "source: notebooks/stats_with_clojure/tabular_data.clj",
     "crumbs": [
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Tabular Data</span>"
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Tabular Data</span>"
     ]
   },
   {
     "objectID": "stats_with_clojure.web_scraping.html",
     "href": "stats_with_clojure.web_scraping.html",
-    "title": "10  Web Scraping",
+    "title": "11  Web Scraping",
     "section": "",
     "text": "source: notebooks/stats_with_clojure/web_scraping.clj",
     "crumbs": [
-      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Web Scraping</span>"
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Web Scraping</span>"
     ]
   },
   {
     "objectID": "stats_with_clojure.bibliography.html",
     "href": "stats_with_clojure.bibliography.html",
-    "title": "11  Bibliography",
+    "title": "12  Bibliography",
     "section": "",
     "text": "Think Stats, 2nd Edition\nIntroduction to Probability and Statistics, 14th Edition\nStatistics and probability, Khan Academy\n\n\nsource: notebooks/stats_with_clojure/bibliography.clj",
     "crumbs": [
-      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Bibliography</span>"
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Bibliography</span>"
     ]
   }
 ]

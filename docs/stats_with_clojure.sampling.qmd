@@ -1,0 +1,43 @@
+
+---
+format:
+  html:
+    toc: true
+    toc-depth: 4
+    theme: [cosmo, notebooks/custom.scss]
+    output-file: stats_with_clojure.sampling.html
+fontsize: 0.9em
+code-block-background: true
+include-in-header: {text: '<link rel = "icon" href = "data:," />'}
+
+---
+<style></style><style>.printedClojure .sourceCode {
+  background-color: transparent;
+  border-style: none;
+}
+</style><style>.clay-limit-image-width .clay-image {max-width: 100%}
+</style>
+<script src="stats_with_clojure.sampling_files/md-default0.js" type="text/javascript"></script><script src="stats_with_clojure.sampling_files/md-default1.js" type="text/javascript"></script>
+
+# Sampling
+
+
+Let's say you want to predict elections result of a local leader in a village. The village contains 6000+ families, and you are on limited budget of time and money. You can't ask all the people their political preferences, instead what you do is to sample, select few of them, ask them what is their political preference, who they might vote, and why. Then you generalize it. This is called sampling.
+
+A lot could go wrong when you sample. You don't go about and ask kids who they think will become the leader of the village, they don't vote, their reasoning might not be as sound as a grown up. Let's say that the village has 10 wealthy, 1000 middle class, 5000 poor families, what ratio you will pick to sample the population? You may pick 10 middle class and 50 poor families for your survey.
+
+What the statistics of previous voting patterns show? Say all members 10 wealthy families have voted in previous elections, only 150 middle class families have voted in previous elections on an average, and on an average only 3500 poor families have voted in previous elections, now what sampling ratio you are thinking about?
+
+Choosing the right sample can make your break your statistical quest. When ever you make prediction by sampling, you must also say what is the margin of error that could be for your predictions to vary. 
+
+
+
+```{=html}
+<div style="background-color:grey;height:2px;width:100%;"></div>
+```
+
+
+
+```{=html}
+<div><pre><small><small>source: <a href="https://github.com/scicloj/stats-with-clojure/blob/main/notebooks/stats_with_clojure/sampling.clj">notebooks/stats_with_clojure/sampling.clj</a></small></small></pre></div>
+```
