@@ -65,6 +65,9 @@ We believe in its final form, this book will be an asset both to people who know
 - [Charts](stats_with_clojure.charts.html)
 
 
+- [Analysis of roll of dice](stats_with_clojure.dice.html)
+
+
 - [Tabular Data](stats_with_clojure.tabular_data.html)
 
 

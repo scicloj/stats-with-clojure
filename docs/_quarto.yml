@@ -7,4 +7,4 @@ format:
 project: {type: book}
 book:
   title: Stats With Clojure
-  chapters: [index.qmd, stats_with_clojure.about_this_book.qmd, stats_with_clojure.getting_this_book.qmd, stats_with_clojure.setting_things_up.qmd, stats_with_clojure.sampling.qmd, stats_with_clojure.fast_math.qmd, stats_with_clojure.basic_statistics.qmd, stats_with_clojure.visualization.qmd, stats_with_clojure.charts.qmd, stats_with_clojure.tabular_data.qmd, stats_with_clojure.web_scraping.qmd, stats_with_clojure.bibliography.qmd]
+  chapters: [index.qmd, stats_with_clojure.about_this_book.qmd, stats_with_clojure.getting_this_book.qmd, stats_with_clojure.setting_things_up.qmd, stats_with_clojure.sampling.qmd, stats_with_clojure.fast_math.qmd, stats_with_clojure.basic_statistics.qmd, stats_with_clojure.visualization.qmd, stats_with_clojure.charts.qmd, stats_with_clojure.dice.qmd, stats_with_clojure.tabular_data.qmd, stats_with_clojure.web_scraping.qmd, stats_with_clojure.bibliography.qmd]

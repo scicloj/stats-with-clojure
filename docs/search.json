@@ -14,7 +14,7 @@
     "href": "index.html#chapters",
     "title": "Stats With Clojure",
     "section": "0.2 Chapters",
-    "text": "0.2 Chapters\n\nAbout This Book\nGetting This Book\nSetting Things Up\nSampling\nFast Math\nBasic Statistics\nVisualization\nCharts\nTabular Data\nWeb Scraping\nBibliography\n\n\nsource: notebooks/index.clj",
+    "text": "0.2 Chapters\n\nAbout This Book\nGetting This Book\nSetting Things Up\nSampling\nFast Math\nBasic Statistics\nVisualization\nCharts\nAnalysis of roll of dice\nTabular Data\nWeb Scraping\nBibliography\n\n\nsource: notebooks/index.clj",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Preface</span>"
     ]
@@ -350,43 +350,53 @@
     ]
   },
   {
+    "objectID": "stats_with_clojure.dice.html",
+    "href": "stats_with_clojure.dice.html",
+    "title": "10  Analysis of roll of dice",
+    "section": "",
+    "text": "(def faces (range 1 7))\n\n\nfaces\n\n\n(1 2 3 4 5 6)\n\n\n(def combinations\n  (for [x faces y faces] [x y]))\n\n\ncombinations\n\n\n([1 1]\n [1 2]\n [1 3]\n [1 4]\n [1 5]\n [1 6]\n [2 1]\n [2 2]\n [2 3]\n [2 4]\n [2 5]\n [2 6]\n [3 1]\n [3 2]\n [3 3]\n [3 4]\n [3 5]\n [3 6]\n [4 1]\n [4 2]\n [4 3]\n [4 4]\n [4 5]\n [4 6]\n [5 1]\n [5 2]\n [5 3]\n [5 4]\n [5 5]\n [5 6]\n [6 1]\n [6 2]\n [6 3]\n [6 4]\n [6 5]\n [6 6])\n\n\n(map #(apply + %) combinations)\n\n\n(2\n 3\n 4\n 5\n 6\n 7\n 3\n 4\n 5\n 6\n 7\n 8\n 4\n 5\n 6\n 7\n 8\n 9\n 5\n 6\n 7\n 8\n 9\n 10\n 6\n 7\n 8\n 9\n 10\n 11\n 7\n 8\n 9\n 10\n 11\n 12)\n\n\n(frequencies (map #(apply + %) combinations))\n\n\n{7 6, 4 3, 6 5, 3 2, 12 1, 2 1, 11 2, 9 4, 5 4, 10 3, 8 5}\n\n\nsource: notebooks/stats_with_clojure/dice.clj",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Analysis of roll of dice</span>"
+    ]
+  },
+  {
     "objectID": "stats_with_clojure.tabular_data.html",
     "href": "stats_with_clojure.tabular_data.html",
-    "title": "10  Tabular Data",
+    "title": "11  Tabular Data",
     "section": "",
-    "text": "10.1 Table Cloth",
+    "text": "11.1 Table Cloth",
     "crumbs": [
-      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Tabular Data</span>"
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Tabular Data</span>"
     ]
   },
   {
     "objectID": "stats_with_clojure.tabular_data.html#table-cloth",
     "href": "stats_with_clojure.tabular_data.html#table-cloth",
-    "title": "10  Tabular Data",
+    "title": "11  Tabular Data",
     "section": "",
     "text": "source: notebooks/stats_with_clojure/tabular_data.clj",
     "crumbs": [
-      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Tabular Data</span>"
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Tabular Data</span>"
     ]
   },
   {
     "objectID": "stats_with_clojure.web_scraping.html",
     "href": "stats_with_clojure.web_scraping.html",
-    "title": "11  Web Scraping",
+    "title": "12  Web Scraping",
     "section": "",
     "text": "source: notebooks/stats_with_clojure/web_scraping.clj",
     "crumbs": [
-      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Web Scraping</span>"
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Web Scraping</span>"
     ]
   },
   {
     "objectID": "stats_with_clojure.bibliography.html",
     "href": "stats_with_clojure.bibliography.html",
-    "title": "12  Bibliography",
+    "title": "13  Bibliography",
     "section": "",
     "text": "Think Stats, 2nd Edition\nIntroduction to Probability and Statistics, 14th Edition\nStatistics and probability, Khan Academy\n\n\nsource: notebooks/stats_with_clojure/bibliography.clj",
     "crumbs": [
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Bibliography</span>"
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Bibliography</span>"
     ]
   }
 ]
