@@ -225,7 +225,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#plotting" id="toc-plotting" class="nav-link active" data-scroll-target="#plotting"><span class="header-section-number">10.1</span> Plotting</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -259,6 +265,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </style>
 <script src="stats_with_clojure.dice_files/md-default0.js" type="text/javascript"></script>
 <script src="stats_with_clojure.dice_files/md-default1.js" type="text/javascript"></script>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Schaumstoffw%C3%BCrfel.jpg/608px-Schaumstoffw%C3%BCrfel.jpg" class="img-fluid"></p>
+<p>In this chapter let’s analyze the roll of pair of dice, and see what odds of betting will make you win. For that let’s define a variable named <code>faces</code>, that holds a range of numbers from 1 to 6.</p>
 <div class="sourceClojure">
 <div class="sourceCode" id="cb1"><pre class="sourceCode clojure code-with-copy"><code class="sourceCode clojure"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>(<span class="bu">def</span><span class="fu"> faces </span>(<span class="kw">range</span> <span class="dv">1</span> <span class="dv">7</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
@@ -268,6 +276,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="printedClojure">
 <div class="sourceCode" id="cb3"><pre class="sourceCode clojure code-with-copy"><code class="sourceCode clojure"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>(<span class="dv">1</span> <span class="dv">2</span> <span class="dv">3</span> <span class="dv">4</span> <span class="dv">5</span> <span class="dv">6</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+<p>Now let’s generate combinations of die throws. So in the code below <code>x</code> and <code>y</code> are variables that hold the numbers from 1 to 6. The <code>for</code> function generates a list of vectors containing all possible combinations of <code>x</code> and <code>y</code>.</p>
 <div class="sourceClojure">
 <div class="sourceCode" id="cb4"><pre class="sourceCode clojure code-with-copy"><code class="sourceCode clojure"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>(<span class="bu">def</span><span class="fu"> combinations</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  (<span class="kw">for</span> [x faces y faces] [x y]))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -313,6 +322,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb6-35"><a href="#cb6-35" aria-hidden="true" tabindex="-1"></a> [<span class="dv">6</span> <span class="dv">5</span>]</span>
 <span id="cb6-36"><a href="#cb6-36" aria-hidden="true" tabindex="-1"></a> [<span class="dv">6</span> <span class="dv">6</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+<p>Now let’s sum up those combinations:</p>
 <div class="sourceClojure">
 <div class="sourceCode" id="cb7"><pre class="sourceCode clojure code-with-copy"><code class="sourceCode clojure"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>(<span class="kw">map</span> #(<span class="kw">apply</span> <span class="kw">+</span> <span class="va">%</span>) combinations)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
@@ -354,16 +364,32 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb8-35"><a href="#cb8-35" aria-hidden="true" tabindex="-1"></a> <span class="dv">11</span></span>
 <span id="cb8-36"><a href="#cb8-36" aria-hidden="true" tabindex="-1"></a> <span class="dv">12</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+<p>Let’s use <code>frequencies</code> to see which number comes up most often when summed up:</p>
 <div class="sourceClojure">
-<div class="sourceCode" id="cb9"><pre class="sourceCode clojure code-with-copy"><code class="sourceCode clojure"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>(<span class="kw">frequencies</span> (<span class="kw">map</span> #(<span class="kw">apply</span> <span class="kw">+</span> <span class="va">%</span>) combinations))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode clojure code-with-copy"><code class="sourceCode clojure"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>(<span class="bu">def</span><span class="fu"> frequency-of-sums </span>(<span class="kw">frequencies</span> (<span class="kw">map</span> #(<span class="kw">apply</span> <span class="kw">+</span> <span class="va">%</span>) combinations)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="sourceClojure">
+<div class="sourceCode" id="cb10"><pre class="sourceCode clojure code-with-copy"><code class="sourceCode clojure"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>frequency-of-sums</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="printedClojure">
-<div class="sourceCode" id="cb10"><pre class="sourceCode clojure code-with-copy"><code class="sourceCode clojure"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>{<span class="dv">7</span> <span class="dv">6</span>, <span class="dv">4</span> <span class="dv">3</span>, <span class="dv">6</span> <span class="dv">5</span>, <span class="dv">3</span> <span class="dv">2</span>, <span class="dv">12</span> <span class="dv">1</span>, <span class="dv">2</span> <span class="dv">1</span>, <span class="dv">11</span> <span class="dv">2</span>, <span class="dv">9</span> <span class="dv">4</span>, <span class="dv">5</span> <span class="dv">4</span>, <span class="dv">10</span> <span class="dv">3</span>, <span class="dv">8</span> <span class="dv">5</span>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb11"><pre class="sourceCode clojure code-with-copy"><code class="sourceCode clojure"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>{<span class="dv">7</span> <span class="dv">6</span>, <span class="dv">4</span> <span class="dv">3</span>, <span class="dv">6</span> <span class="dv">5</span>, <span class="dv">3</span> <span class="dv">2</span>, <span class="dv">12</span> <span class="dv">1</span>, <span class="dv">2</span> <span class="dv">1</span>, <span class="dv">11</span> <span class="dv">2</span>, <span class="dv">9</span> <span class="dv">4</span>, <span class="dv">5</span> <span class="dv">4</span>, <span class="dv">10</span> <span class="dv">3</span>, <span class="dv">8</span> <span class="dv">5</span>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+<p>Now let’s sort <code>frequency-of-sums</code> by its values:</p>
+<div class="sourceClojure">
+<div class="sourceCode" id="cb12"><pre class="sourceCode clojure code-with-copy"><code class="sourceCode clojure"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>(<span class="kw">sort-by</span> <span class="kw">val</span> <span class="kw">&gt;</span> frequency-of-sums)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="printedClojure">
+<div class="sourceCode" id="cb13"><pre class="sourceCode clojure code-with-copy"><code class="sourceCode clojure"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>([<span class="dv">7</span> <span class="dv">6</span>] [<span class="dv">6</span> <span class="dv">5</span>] [<span class="dv">8</span> <span class="dv">5</span>] [<span class="dv">9</span> <span class="dv">4</span>] [<span class="dv">5</span> <span class="dv">4</span>] [<span class="dv">4</span> <span class="dv">3</span>] [<span class="dv">10</span> <span class="dv">3</span>] [<span class="dv">3</span> <span class="dv">2</span>] [<span class="dv">11</span> <span class="dv">2</span>] [<span class="dv">12</span> <span class="dv">1</span>] [<span class="dv">2</span> <span class="dv">1</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Looks like when a pair of dice is thrown, number 7 comes up most often, followed by 6, 8, and 9. So better bet on number 7 when you throw a pair of dice.</p>
+<section id="plotting" class="level2" data-number="10.1">
+<h2 data-number="10.1" class="anchored" data-anchor-id="plotting"><span class="header-section-number">10.1</span> Plotting</h2>
+<p>TBD</p>
 <div style="background-color:grey;height:2px;width:100%;"></div>
 <div><pre><small><small>source: <a href="https://github.com/scicloj/stats-with-clojure/blob/main/notebooks/stats_with_clojure/dice.clj">notebooks/stats_with_clojure/dice.clj</a></small></small></pre></div>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
