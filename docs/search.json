@@ -264,7 +264,17 @@
     "href": "stats_with_clojure.visualization.html",
     "title": "8  Visualization",
     "section": "",
-    "text": "8.1 London Cholera Outbreak\nhttps://en.wikipedia.org/wiki/1854_Broad_Street_cholera_outbreak",
+    "text": "8.1 A Word About Visualization\nHumans are not good with numbers. Look at a spreadsheet full of numbers, and you can’t make any sense, but if the spreadsheet includes graphs ,am ay be you can. Numbers came into existence may be few thousand years ago when humans developed commerce. We genetically aren’t used to it. Life developed vision while insects were around, millions of years ago, so our brain carries all the packages to process vision instantly.\nLot of statistics is about creating graphs, or visualizing data so that we humans can understand it more intuitively than looking at a bunch of numbers. In this chapter you will see how three visualizations helped humans to understand what’s going on without pouring into stream of numbers.",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Visualization</span>"
+    ]
+  },
+  {
+    "objectID": "stats_with_clojure.visualization.html#london-cholera-outbreak",
+    "href": "stats_with_clojure.visualization.html#london-cholera-outbreak",
+    "title": "8  Visualization",
+    "section": "8.2 London Cholera Outbreak",
+    "text": "8.2 London Cholera Outbreak\nhttps://en.wikipedia.org/wiki/1854_Broad_Street_cholera_outbreak\n|:-:|  | John Snow |",
     "crumbs": [
       "<span class='chapter-number'>8</span>  <span class='chapter-title'>Visualization</span>"
     ]
@@ -273,8 +283,8 @@
     "objectID": "stats_with_clojure.visualization.html#napoleons-invasion-of-russia",
     "href": "stats_with_clojure.visualization.html#napoleons-invasion-of-russia",
     "title": "8  Visualization",
-    "section": "8.2 Napoleons Invasion of Russia",
-    "text": "8.2 Napoleons Invasion of Russia\nhttps://en.wikipedia.org/wiki/French_invasion_of_Russia",
+    "section": "8.3 Napoleons Invasion of Russia",
+    "text": "8.3 Napoleons Invasion of Russia\nhttps://en.wikipedia.org/wiki/French_invasion_of_Russia",
     "crumbs": [
       "<span class='chapter-number'>8</span>  <span class='chapter-title'>Visualization</span>"
     ]
@@ -283,8 +293,8 @@
     "objectID": "stats_with_clojure.visualization.html#florence-nightingale",
     "href": "stats_with_clojure.visualization.html#florence-nightingale",
     "title": "8  Visualization",
-    "section": "8.3 Florence Nightingale",
-    "text": "8.3 Florence Nightingale\nhttps://en.wikipedia.org/wiki/Florence_Nightingale\n\n\nsource: notebooks/stats_with_clojure/visualization.clj",
+    "section": "8.4 Florence Nightingale",
+    "text": "8.4 Florence Nightingale\nhttps://en.wikipedia.org/wiki/Florence_Nightingale\n\n\nsource: notebooks/stats_with_clojure/visualization.clj",
     "crumbs": [
       "<span class='chapter-number'>8</span>  <span class='chapter-title'>Visualization</span>"
     ]

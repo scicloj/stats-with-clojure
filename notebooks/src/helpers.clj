@@ -1,5 +1,5 @@
 (ns src.helpers
-  (:require [scicloj.kindly.v4.api :as kindly]
+  (:require [scicloj.kindly.v4.api :as kindly] 
             [scicloj.kindly.v4.kind :as kind]
             [clojure.string :as str]))
 
