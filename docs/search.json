@@ -274,7 +274,7 @@
     "href": "stats_with_clojure.visualization.html#london-cholera-outbreak",
     "title": "8  Visualization",
     "section": "8.2 London Cholera Outbreak",
-    "text": "8.2 London Cholera Outbreak\nhttps://en.wikipedia.org/wiki/1854_Broad_Street_cholera_outbreak\n|:-:|  | John Snow |",
+    "text": "8.2 London Cholera Outbreak\nhttps://en.wikipedia.org/wiki/1854_Broad_Street_cholera_outbreak\nIt was 1854, and London had a cholera outbreak. None knew how one contracted cholera, and it was thought smelling foul things made you sick. The death tolls were rising and something must be done about it.\nA person named John Snow, pictured below, used visualization techniques to find the source of this disease.\n\nTake look at the map below:\n\nIf you zoom in, you can see some black bars. Each bar is a dead person due to cholera.\n\nIf you see the picture above, you can notice that around a certain pump, there are more deaths. John Snow inferred that Cholera spreads due to contaminated water, and this particular pump was very much contaminated.\n\nTo prevent the spread of this disease, he removed the handle of this pump, and cholera deaths decreased. Till this day, the pump whose handle bar is removed stands in London. There is bar nearby that bears the name of John Show.",
     "crumbs": [
       "<span class='chapter-number'>8</span>  <span class='chapter-title'>Visualization</span>"
     ]
@@ -294,7 +294,17 @@
     "href": "stats_with_clojure.visualization.html#florence-nightingale",
     "title": "8  Visualization",
     "section": "8.4 Florence Nightingale",
-    "text": "8.4 Florence Nightingale\nhttps://en.wikipedia.org/wiki/Florence_Nightingale\n\n\nsource: notebooks/stats_with_clojure/visualization.clj",
+    "text": "8.4 Florence Nightingale\nhttps://en.wikipedia.org/wiki/Florence_Nightingale",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Visualization</span>"
+    ]
+  },
+  {
+    "objectID": "stats_with_clojure.visualization.html#hans-roslings-analysis-of-countries-gdp",
+    "href": "stats_with_clojure.visualization.html#hans-roslings-analysis-of-countries-gdp",
+    "title": "8  Visualization",
+    "section": "8.5 Hans Rosling’s analysis of countries GDP",
+    "text": "8.5 Hans Rosling’s analysis of countries GDP\nhttps://www.youtube.com/watch?v=jbkSRLYSojo\n\nsource: notebooks/stats_with_clojure/visualization.clj",
     "crumbs": [
       "<span class='chapter-number'>8</span>  <span class='chapter-title'>Visualization</span>"
     ]
