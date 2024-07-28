@@ -6,7 +6,7 @@ Napoleon's invasion of Russia is a disastrous one. Russians did not really fight
 
 ![](https://upload.wikimedia.org/wikipedia/commons/2/29/Minard.png)
 
-His troops weren't prepared for winter, and while traveling back many died. The picture above is a great postmortem visualization of his troop numbers. It shows roughly the path the troops tool from France to Moscow. The path is shown in brown, the width of the path is proportional to the strength of the troops. The path traced in black are the path bac from Russia to France. You can see how the black path is narrow, representing the reduced troop numbers.
+His troops weren't prepared for winter, and while traveling back many died. The picture above is a great postmortem visualization of his troop numbers. It shows roughly the path the troops tool from France to Moscow. The path is shown in brown, the width of the path is proportional to the strength of the troops. The path traced in black are the path back from Russia to France. You can see how the black path is narrow, representing the reduced troop numbers.
 
 While returning, a lot of troops died in the cold, so the return path in black is traced below the march forward path in brown, and below the return path, you could see the corresponding winter temperatures. You could see while the troops were returning how the temperature dwindled and how the width of the kine shrinks because of it.
 
