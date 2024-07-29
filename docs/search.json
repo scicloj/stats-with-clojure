@@ -404,7 +404,17 @@
     "href": "stats_with_clojure.tabular_data.html#table-cloth",
     "title": "11  Tabular Data",
     "section": "",
-    "text": "source: notebooks/stats_with_clojure/tabular_data.clj",
+    "text": "(require '[tablecloth.api :as tc]\n         '[tech.v3.datatype.functional :as dfn])",
+    "crumbs": [
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Tabular Data</span>"
+    ]
+  },
+  {
+    "objectID": "stats_with_clojure.tabular_data.html#the-iris-data-set",
+    "href": "stats_with_clojure.tabular_data.html#the-iris-data-set",
+    "title": "11  Tabular Data",
+    "section": "11.2 The iris data set",
+    "text": "11.2 The iris data set\nhttps://gist.github.com/curran/a08a1080b88344b0c8a7/\n\n(defonce iris (tc/dataset\n               \"https://gist.githubusercontent.com/curran/a08a1080b88344b0c8a7/raw/0e7a9b0a5d22642a06d3d5b9bcbad9890c8ee534/iris.csv\"))\n\n\niris\n\n\nhttps://gist.githubusercontent.com/curran/a08a1080b88344b0c8a7/raw/0e7a9b0a5d22642a06d3d5b9bcbad9890c8ee534/iris.csv [150 5]:\n\n\n\nsepal_length\nsepal_width\npetal_length\npetal_width\nspecies\n\n\n\n\n5.1\n3.5\n1.4\n0.2\nsetosa\n\n\n4.9\n3.0\n1.4\n0.2\nsetosa\n\n\n4.7\n3.2\n1.3\n0.2\nsetosa\n\n\n4.6\n3.1\n1.5\n0.2\nsetosa\n\n\n5.0\n3.6\n1.4\n0.2\nsetosa\n\n\n5.4\n3.9\n1.7\n0.4\nsetosa\n\n\n4.6\n3.4\n1.4\n0.3\nsetosa\n\n\n5.0\n3.4\n1.5\n0.2\nsetosa\n\n\n4.4\n2.9\n1.4\n0.2\nsetosa\n\n\n4.9\n3.1\n1.5\n0.1\nsetosa\n\n\n…\n…\n…\n…\n…\n\n\n6.9\n3.1\n5.4\n2.1\nvirginica\n\n\n6.7\n3.1\n5.6\n2.4\nvirginica\n\n\n6.9\n3.1\n5.1\n2.3\nvirginica\n\n\n5.8\n2.7\n5.1\n1.9\nvirginica\n\n\n6.8\n3.2\n5.9\n2.3\nvirginica\n\n\n6.7\n3.3\n5.7\n2.5\nvirginica\n\n\n6.7\n3.0\n5.2\n2.3\nvirginica\n\n\n6.3\n2.5\n5.0\n1.9\nvirginica\n\n\n6.5\n3.0\n5.2\n2.0\nvirginica\n\n\n6.2\n3.4\n5.4\n2.3\nvirginica\n\n\n5.9\n3.0\n5.1\n1.8\nvirginica\n\n\n\n\n\n(tc/columns iris)\n\n\n(#tech.v3.dataset.column&lt;float64&gt;[150]\nsepal_length\n[5.100, 4.900, 4.700, 4.600, 5.000, 5.400, 4.600, 5.000, 4.400, 4.900, 5.400, 4.800, 4.800, 4.300, 5.800, 5.700, 5.400, 5.100, 5.700, 5.100...]\n #tech.v3.dataset.column&lt;float64&gt;[150]\nsepal_width\n[3.500, 3.000, 3.200, 3.100, 3.600, 3.900, 3.400, 3.400, 2.900, 3.100, 3.700, 3.400, 3.000, 3.000, 4.000, 4.400, 3.900, 3.500, 3.800, 3.800...]\n #tech.v3.dataset.column&lt;float64&gt;[150]\npetal_length\n[1.400, 1.400, 1.300, 1.500, 1.400, 1.700, 1.400, 1.500, 1.400, 1.500, 1.500, 1.600, 1.400, 1.100, 1.200, 1.500, 1.300, 1.400, 1.700, 1.500...]\n #tech.v3.dataset.column&lt;float64&gt;[150]\npetal_width\n[0.2000, 0.2000, 0.2000, 0.2000, 0.2000, 0.4000, 0.3000, 0.2000, 0.2000, 0.1000, 0.2000, 0.2000, 0.1000, 0.1000, 0.2000, 0.4000, 0.4000, 0.3000, 0.3000, 0.3000...]\n #tech.v3.dataset.column&lt;string&gt;[150]\nspecies\n[setosa, setosa, setosa, setosa, setosa, setosa, setosa, setosa, setosa, setosa, setosa, setosa, setosa, setosa, setosa, setosa, setosa, setosa, setosa, setosa...])\n\n\n(tc/column iris \"species\")\n\n\n#tech.v3.dataset.column&lt;string&gt;[150]\nspecies\n[setosa, setosa, setosa, setosa, setosa, setosa, setosa, setosa, setosa, setosa, setosa, setosa, setosa, setosa, setosa, setosa, setosa, setosa, setosa, setosa...]\n\n\n(set (tc/column iris \"species\"))\n\n\n#{\"versicolor\" \"setosa\" \"virginica\"}\n\nhttps://github.com/scicloj/tablecloth/\nhttps://scicloj.github.io/tablecloth/\n\nsource: notebooks/stats_with_clojure/tabular_data.clj",
     "crumbs": [
       "<span class='chapter-number'>11</span>  <span class='chapter-title'>Tabular Data</span>"
     ]

@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -196,6 +230,7 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#table-cloth" id="toc-table-cloth" class="nav-link active" data-scroll-target="#table-cloth"><span class="header-section-number">11.1</span> Table Cloth</a></li>
+  <li><a href="#the-iris-data-set" id="toc-the-iris-data-set" class="nav-link" data-scroll-target="#the-iris-data-set"><span class="header-section-number">11.2</span> The iris data set</a></li>
   </ul>
 </nav>
     </div>
@@ -233,6 +268,227 @@ ul.task-list li input[type="checkbox"] {
 <script src="stats_with_clojure.tabular_data_files/md-default1.js" type="text/javascript"></script>
 <section id="table-cloth" class="level2" data-number="11.1">
 <h2 data-number="11.1" class="anchored" data-anchor-id="table-cloth"><span class="header-section-number">11.1</span> Table Cloth</h2>
+<div class="sourceClojure">
+<div class="sourceCode" id="cb1"><pre class="sourceCode clojure code-with-copy"><code class="sourceCode clojure"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>(<span class="kw">require</span> '[tablecloth.api <span class="at">:as</span> tc]</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>         '[tech.v3.datatype.functional <span class="at">:as</span> dfn])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="the-iris-data-set" class="level2" data-number="11.2">
+<h2 data-number="11.2" class="anchored" data-anchor-id="the-iris-data-set"><span class="header-section-number">11.2</span> The iris data set</h2>
+<p><a href="https://gist.github.com/curran/a08a1080b88344b0c8a7/" class="uri">https://gist.github.com/curran/a08a1080b88344b0c8a7/</a></p>
+<div class="sourceClojure">
+<div class="sourceCode" id="cb2"><pre class="sourceCode clojure code-with-copy"><code class="sourceCode clojure"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>(<span class="bu">defonce</span><span class="fu"> iris </span>(tc/dataset</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>               <span class="st">"https://gist.githubusercontent.com/curran/a08a1080b88344b0c8a7/raw/0e7a9b0a5d22642a06d3d5b9bcbad9890c8ee534/iris.csv"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="sourceClojure">
+<div class="sourceCode" id="cb3"><pre class="sourceCode clojure code-with-copy"><code class="sourceCode clojure"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>iris</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="clay-dataset">
+<p>https://gist.githubusercontent.com/curran/a08a1080b88344b0c8a7/raw/0e7a9b0a5d22642a06d3d5b9bcbad9890c8ee534/iris.csv [150 5]:</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th style="text-align: right;">sepal_length</th>
+<th style="text-align: right;">sepal_width</th>
+<th style="text-align: right;">petal_length</th>
+<th style="text-align: right;">petal_width</th>
+<th>species</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">5.1</td>
+<td style="text-align: right;">3.5</td>
+<td style="text-align: right;">1.4</td>
+<td style="text-align: right;">0.2</td>
+<td>setosa</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">4.9</td>
+<td style="text-align: right;">3.0</td>
+<td style="text-align: right;">1.4</td>
+<td style="text-align: right;">0.2</td>
+<td>setosa</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">4.7</td>
+<td style="text-align: right;">3.2</td>
+<td style="text-align: right;">1.3</td>
+<td style="text-align: right;">0.2</td>
+<td>setosa</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">4.6</td>
+<td style="text-align: right;">3.1</td>
+<td style="text-align: right;">1.5</td>
+<td style="text-align: right;">0.2</td>
+<td>setosa</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">5.0</td>
+<td style="text-align: right;">3.6</td>
+<td style="text-align: right;">1.4</td>
+<td style="text-align: right;">0.2</td>
+<td>setosa</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">5.4</td>
+<td style="text-align: right;">3.9</td>
+<td style="text-align: right;">1.7</td>
+<td style="text-align: right;">0.4</td>
+<td>setosa</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">4.6</td>
+<td style="text-align: right;">3.4</td>
+<td style="text-align: right;">1.4</td>
+<td style="text-align: right;">0.3</td>
+<td>setosa</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">5.0</td>
+<td style="text-align: right;">3.4</td>
+<td style="text-align: right;">1.5</td>
+<td style="text-align: right;">0.2</td>
+<td>setosa</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">4.4</td>
+<td style="text-align: right;">2.9</td>
+<td style="text-align: right;">1.4</td>
+<td style="text-align: right;">0.2</td>
+<td>setosa</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">4.9</td>
+<td style="text-align: right;">3.1</td>
+<td style="text-align: right;">1.5</td>
+<td style="text-align: right;">0.1</td>
+<td>setosa</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">…</td>
+<td style="text-align: right;">…</td>
+<td style="text-align: right;">…</td>
+<td style="text-align: right;">…</td>
+<td>…</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">6.9</td>
+<td style="text-align: right;">3.1</td>
+<td style="text-align: right;">5.4</td>
+<td style="text-align: right;">2.1</td>
+<td>virginica</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">6.7</td>
+<td style="text-align: right;">3.1</td>
+<td style="text-align: right;">5.6</td>
+<td style="text-align: right;">2.4</td>
+<td>virginica</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">6.9</td>
+<td style="text-align: right;">3.1</td>
+<td style="text-align: right;">5.1</td>
+<td style="text-align: right;">2.3</td>
+<td>virginica</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">5.8</td>
+<td style="text-align: right;">2.7</td>
+<td style="text-align: right;">5.1</td>
+<td style="text-align: right;">1.9</td>
+<td>virginica</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">6.8</td>
+<td style="text-align: right;">3.2</td>
+<td style="text-align: right;">5.9</td>
+<td style="text-align: right;">2.3</td>
+<td>virginica</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">6.7</td>
+<td style="text-align: right;">3.3</td>
+<td style="text-align: right;">5.7</td>
+<td style="text-align: right;">2.5</td>
+<td>virginica</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">6.7</td>
+<td style="text-align: right;">3.0</td>
+<td style="text-align: right;">5.2</td>
+<td style="text-align: right;">2.3</td>
+<td>virginica</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">6.3</td>
+<td style="text-align: right;">2.5</td>
+<td style="text-align: right;">5.0</td>
+<td style="text-align: right;">1.9</td>
+<td>virginica</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">6.5</td>
+<td style="text-align: right;">3.0</td>
+<td style="text-align: right;">5.2</td>
+<td style="text-align: right;">2.0</td>
+<td>virginica</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">6.2</td>
+<td style="text-align: right;">3.4</td>
+<td style="text-align: right;">5.4</td>
+<td style="text-align: right;">2.3</td>
+<td>virginica</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">5.9</td>
+<td style="text-align: right;">3.0</td>
+<td style="text-align: right;">5.1</td>
+<td style="text-align: right;">1.8</td>
+<td>virginica</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sourceClojure">
+<div class="sourceCode" id="cb4"><pre class="sourceCode clojure code-with-copy"><code class="sourceCode clojure"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>(tc/columns iris)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="printedClojure">
+<div class="sourceCode" id="cb5"><pre class="sourceCode clojure code-with-copy"><code class="sourceCode clojure"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>(#tech.v3.dataset.column&lt;float64&gt;[<span class="dv">150</span>]</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>sepal_length</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>[<span class="fl">5.100</span>, <span class="fl">4.900</span>, <span class="fl">4.700</span>, <span class="fl">4.600</span>, <span class="fl">5.000</span>, <span class="fl">5.400</span>, <span class="fl">4.600</span>, <span class="fl">5.000</span>, <span class="fl">4.400</span>, <span class="fl">4.900</span>, <span class="fl">5.400</span>, <span class="fl">4.800</span>, <span class="fl">4.800</span>, <span class="fl">4.300</span>, <span class="fl">5.800</span>, <span class="fl">5.700</span>, <span class="fl">5.400</span>, <span class="fl">5.100</span>, <span class="fl">5.700</span>, <span class="dv">5</span>.<span class="dv">100</span>...]</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a> #tech.v3.dataset.column&lt;float64&gt;[<span class="dv">150</span>]</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>sepal_width</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>[<span class="fl">3.500</span>, <span class="fl">3.000</span>, <span class="fl">3.200</span>, <span class="fl">3.100</span>, <span class="fl">3.600</span>, <span class="fl">3.900</span>, <span class="fl">3.400</span>, <span class="fl">3.400</span>, <span class="fl">2.900</span>, <span class="fl">3.100</span>, <span class="fl">3.700</span>, <span class="fl">3.400</span>, <span class="fl">3.000</span>, <span class="fl">3.000</span>, <span class="fl">4.000</span>, <span class="fl">4.400</span>, <span class="fl">3.900</span>, <span class="fl">3.500</span>, <span class="fl">3.800</span>, <span class="dv">3</span>.<span class="dv">800</span>...]</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a> #tech.v3.dataset.column&lt;float64&gt;[<span class="dv">150</span>]</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>petal_length</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>[<span class="fl">1.400</span>, <span class="fl">1.400</span>, <span class="fl">1.300</span>, <span class="fl">1.500</span>, <span class="fl">1.400</span>, <span class="fl">1.700</span>, <span class="fl">1.400</span>, <span class="fl">1.500</span>, <span class="fl">1.400</span>, <span class="fl">1.500</span>, <span class="fl">1.500</span>, <span class="fl">1.600</span>, <span class="fl">1.400</span>, <span class="fl">1.100</span>, <span class="fl">1.200</span>, <span class="fl">1.500</span>, <span class="fl">1.300</span>, <span class="fl">1.400</span>, <span class="fl">1.700</span>, <span class="dv">1</span>.<span class="dv">500</span>...]</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a> #tech.v3.dataset.column&lt;float64&gt;[<span class="dv">150</span>]</span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>petal_width</span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>[<span class="fl">0.2000</span>, <span class="fl">0.2000</span>, <span class="fl">0.2000</span>, <span class="fl">0.2000</span>, <span class="fl">0.2000</span>, <span class="fl">0.4000</span>, <span class="fl">0.3000</span>, <span class="fl">0.2000</span>, <span class="fl">0.2000</span>, <span class="fl">0.1000</span>, <span class="fl">0.2000</span>, <span class="fl">0.2000</span>, <span class="fl">0.1000</span>, <span class="fl">0.1000</span>, <span class="fl">0.2000</span>, <span class="fl">0.4000</span>, <span class="fl">0.4000</span>, <span class="fl">0.3000</span>, <span class="fl">0.3000</span>, <span class="dv">0</span>.<span class="dv">3000</span>...]</span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a> #tech.v3.dataset.column&lt;string&gt;[<span class="dv">150</span>]</span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>species</span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>[setosa, setosa, setosa, setosa, setosa, setosa, setosa, setosa, setosa, setosa, setosa, setosa, setosa, setosa, setosa, setosa, setosa, setosa, setosa, setosa...])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="sourceClojure">
+<div class="sourceCode" id="cb6"><pre class="sourceCode clojure code-with-copy"><code class="sourceCode clojure"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>(tc/column iris <span class="st">"species"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="printedClojure">
+<div class="sourceCode" id="cb7"><pre class="sourceCode clojure code-with-copy"><code class="sourceCode clojure"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>#tech.v3.dataset.column&lt;string&gt;[<span class="dv">150</span>]</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>species</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>[setosa, setosa, setosa, setosa, setosa, setosa, setosa, setosa, setosa, setosa, setosa, setosa, setosa, setosa, setosa, setosa, setosa, setosa, setosa, setosa...]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="sourceClojure">
+<div class="sourceCode" id="cb8"><pre class="sourceCode clojure code-with-copy"><code class="sourceCode clojure"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>(<span class="kw">set</span> (tc/column iris <span class="st">"species"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="printedClojure">
+<div class="sourceCode" id="cb9"><pre class="sourceCode clojure code-with-copy"><code class="sourceCode clojure"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>#{<span class="st">"versicolor"</span> <span class="st">"setosa"</span> <span class="st">"virginica"</span>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><a href="https://github.com/scicloj/tablecloth/" class="uri">https://github.com/scicloj/tablecloth/</a></p>
+<p><a href="https://scicloj.github.io/tablecloth/" class="uri">https://scicloj.github.io/tablecloth/</a></p>
 <div style="background-color:grey;height:2px;width:100%;"></div>
 <div><pre><small><small>source: <a href="https://github.com/scicloj/stats-with-clojure/blob/main/notebooks/stats_with_clojure/tabular_data.clj">notebooks/stats_with_clojure/tabular_data.clj</a></small></small></pre></div>
 
